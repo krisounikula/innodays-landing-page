@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connected Journey — Austria</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', sans-serif; }
+    .hero-gradient {
+      background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 60%, #0f172a 100%);
+    }
+    .phone-frame {
+      background: #111;
+      border-radius: 44px;
+      border: 3px solid rgba(255,255,255,0.12);
+      box-shadow: 0 50px 100px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.08);
+    }
+    .animate-pulse-slow {
+      animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    }
+  </style>
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+  <!-- ─── HERO ─── -->
+  <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-10 right-10 w-[500px] h-[500px] rounded-full bg-purple-600/20 blur-[120px]"></div>
+      <div class="absolute bottom-10 left-0 w-[400px] h-[400px] rounded-full bg-indigo-500/15 blur-[100px]"></div>
+      <div class="absolute top-1/2 left-1/4 w-[300px] h-[300px] rounded-full bg-amber-500/10 blur-[80px]"></div>
+    </div>
+
+    <div class="relative max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: Headline + CTA -->
+      <div>
+        <div class="inline-flex items-center gap-2.5 bg-white/10 text-white/75 text-xs font-medium px-4 py-2 rounded-full mb-10 border border-white/15 backdrop-blur-sm">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse-slow"></span>
+          Connected Journey · InnoDays 2026 · Österreich Werbung
+        </div>
+
+        <h1 class="text-5xl lg:text-[3.5rem] font-black text-white leading-[1.07] mb-7 tracking-tight">
+          "I want to go there —<br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-300 to-amber-400">
+            but I don't know<br>where it is."
+          </span>
+        </h1>
+
+        <p class="text-lg text-white/65 mb-10 leading-relaxed max-w-[480px]">
+          You see a place on a Reel. Hooked in four seconds.
+          Then five tabs later, the mood is gone — and you book somewhere else.
+          <span class="text-white/90 font-medium">Austria loses you before the journey even begins.</span>
+        </p>
+
+        <!-- Primary CTA with screenshot thumbnail -->
+        <a href="#plan" class="group inline-flex items-center gap-5 bg-white hover:bg-amber-50 text-gray-900 rounded-2xl px-5 py-4 font-semibold shadow-2xl hover:shadow-amber-400/25 hover:-translate-y-1 transition-all duration-300 mb-5">
+          <!-- Mini phone + screenshot -->
+          <div class="w-10 h-[68px] rounded-xl overflow-hidden border-2 border-gray-100 flex-shrink-0 shadow-md relative">
+            <img src="WhatsApp Image 2026-05-20 at 20.07.36.jpeg"
+                 alt="A Reel that starts the journey"
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+          </div>
+          <div>
+            <div class="text-base font-black leading-tight">Plan my trip from this Reel</div>
+            <div class="text-sm text-gray-400 font-normal mt-0.5">Spark to booked · in minutes</div>
+          </div>
+          <span class="text-amber-500 text-xl ml-1 group-hover:translate-x-1 transition-transform duration-200">→</span>
+        </a>
+
+        <p class="text-white/35 text-sm flex items-center gap-2">
+          <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+          </svg>
+          Your context, your control. No sign-up required.
+        </p>
+      </div>
+
+      <!-- Right: Phone mockup with TikTok screenshot + Connected Journey overlay -->
+      <div class="flex justify-center lg:justify-end">
+        <div class="relative">
+          <div class="absolute inset-0 bg-gradient-to-br from-amber-400/15 to-purple-600/15 rounded-[52px] blur-3xl scale-110"></div>
+
+          <div class="phone-frame relative w-[280px] overflow-hidden">
+            <!-- Status bar -->
+            <div class="absolute top-0 left-0 right-0 z-10 flex justify-between items-center px-6 pt-4 pb-2 bg-black/40 backdrop-blur-sm">
+              <span class="text-white text-xs font-semibold">20:06</span>
+              <div class="flex items-center gap-1 text-white text-xs">
+                <span>4G</span>
+                <svg class="w-4 h-3 ml-0.5" viewBox="0 0 20 14" fill="white">
+                  <rect x="0" y="6" width="3" height="8" rx="1"/>
+                  <rect x="5" y="4" width="3" height="10" rx="1"/>
+                  <rect x="10" y="2" width="3" height="12" rx="1"/>
+                  <rect x="15" y="0" width="3" height="14" rx="1" opacity="0.35"/>
+                </svg>
+              </div>
+            </div>
+
+            <!-- The Reel screenshot -->
+            <img src="WhatsApp Image 2026-05-20 at 20.07.36.jpeg"
+                 alt="A Reel that sparked the journey"
+                 class="w-full pt-7">
+
+            <!-- Connected Journey overlay activating -->
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/92 to-transparent pt-20 pb-5 px-4">
+              <div class="flex items-center gap-2 mb-3">
+                <div class="w-6 h-6 rounded-full bg-amber-400 flex items-center justify-center flex-shrink-0">
+                  <span class="text-[10px] font-black text-black">✦</span>
+                </div>
+                <span class="text-white/75 text-xs font-medium">Connected Journey</span>
+                <span class="ml-auto text-emerald-400 text-xs font-semibold flex items-center gap-1">
+                  <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span> Live
+                </span>
+              </div>
+
+              <div class="bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/15">
+                <div class="flex justify-between items-start mb-3">
+                  <div>
+                    <p class="text-white text-sm font-bold">Surin Islands</p>
+                    <p class="text-white/45 text-xs">Matched from Reel · worldpitou</p>
+                  </div>
+                  <span class="text-amber-300 text-xs font-bold bg-amber-400/15 px-2 py-0.5 rounded-full">3 days</span>
+                </div>
+
+                <div class="space-y-1.5 mb-4">
+                  <div class="flex items-center gap-2">
+                    <span class="text-emerald-400 text-xs font-bold">✓</span>
+                    <span class="text-white/65 text-xs">Train + Ferry · Bangkok → Ranong</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-emerald-400 text-xs font-bold">✓</span>
+                    <span class="text-white/65 text-xs">Eco-bungalow · Beach access</span>
+                  </div>
+                  <div class="flex items-center gap-2">
+                    <span class="text-amber-400 text-xs font-bold">→</span>
+                    <span class="text-white/65 text-xs">Snorkeling · Market · Sunrise hike</span>
+                  </div>
+                </div>
+
+                <button class="w-full bg-amber-400 hover:bg-amber-300 text-black text-sm font-black rounded-xl py-2.5 transition-colors">
+                  Book this trip →
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating badges -->
+          <div class="absolute -left-7 top-20 bg-emerald-500 text-white text-xs font-black px-3 py-2 rounded-xl shadow-xl -rotate-3 leading-snug">
+            Context<br>shared ✓
+          </div>
+          <div class="absolute -right-7 bottom-36 bg-indigo-600 text-white text-xs font-black px-3 py-2 rounded-xl shadow-xl rotate-3 leading-snug">
+            No forms<br>filled ✓
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── THE BREAK IN THE JOURNEY ─── -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-xs font-bold text-gray-400 uppercase tracking-[0.15em] mb-3">Why Austria loses guests today</p>
+      <h2 class="text-3xl lg:text-4xl font-black text-gray-900 mb-12">
+        The journey that breaks <span class="text-amber-500">every time</span>
+      </h2>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-left">
+          <div class="w-8 h-8 rounded-lg bg-amber-100 text-amber-600 font-black text-sm flex items-center justify-center mb-4">1</div>
+          <div class="text-sm font-bold text-amber-600 mb-1.5">Spark</div>
+          <p class="text-sm text-gray-500 leading-relaxed">She sees a Reel of Styria. Hooked in 4 seconds.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-left">
+          <div class="w-8 h-8 rounded-lg bg-orange-100 text-orange-600 font-black text-sm flex items-center justify-center mb-4">2</div>
+          <div class="text-sm font-bold text-orange-600 mb-1.5">Confusion</div>
+          <p class="text-sm text-gray-500 leading-relaxed">Five tabs. Trains, hotels, maps — context resets every time.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-left">
+          <div class="w-8 h-8 rounded-lg bg-red-100 text-red-600 font-black text-sm flex items-center justify-center mb-4">3</div>
+          <div class="text-sm font-bold text-red-500 mb-1.5">Friction</div>
+          <p class="text-sm text-gray-500 leading-relaxed">Generic "top 10" results. She re-introduces herself everywhere.</p>
+        </div>
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100/50 text-left bg-gray-50/50">
+          <div class="w-8 h-8 rounded-lg bg-gray-200 text-gray-500 font-black text-sm flex items-center justify-center mb-4">4</div>
+          <div class="text-sm font-bold text-gray-400 mb-1.5">Loss</div>
+          <p class="text-sm text-gray-400 leading-relaxed">She books Porto. <strong class="text-gray-600">Austria never had a chance.</strong></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── THREE BENEFITS: Discover → Plan → Go ─── -->
+  <section class="py-24 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <p class="text-xs font-bold text-gray-400 uppercase tracking-[0.15em] mb-3">How it works</p>
+        <h2 class="text-3xl lg:text-4xl font-black text-gray-900">
+          From spark to complete trip.<br>
+          <span class="text-indigo-600">In one flow.</span>
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-8">
+
+        <!-- Discover -->
+        <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl p-8 border border-amber-100 hover:border-amber-200 hover:-translate-y-1 transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-amber-400 flex items-center justify-center text-black font-black text-lg mb-6 shadow-lg shadow-amber-200">✦</div>
+          <div class="text-[10px] font-bold text-amber-600 uppercase tracking-[0.15em] mb-2">01 · Discover</div>
+          <h3 class="text-2xl font-black text-gray-900 mb-4 leading-tight">Spot it on a Reel.<br>We catch the moment.</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            The moment you're inspired — a Reel, a photo, a friend's story — Connected Journey captures the spark before the mood disappears.
+          </p>
+        </div>
+
+        <!-- Plan -->
+        <div class="bg-gradient-to-br from-indigo-50 to-purple-50 rounded-3xl p-8 border border-indigo-100 hover:border-indigo-200 hover:-translate-y-1 transition-all duration-300 lg:mt-8">
+          <div class="w-12 h-12 rounded-2xl bg-indigo-600 flex items-center justify-center text-white font-black text-lg mb-6 shadow-lg shadow-indigo-200">◎</div>
+          <div class="text-[10px] font-bold text-indigo-600 uppercase tracking-[0.15em] mb-2">02 · Plan</div>
+          <h3 class="text-2xl font-black text-gray-900 mb-4 leading-tight">Your context travels with you.</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Share your vibe once. Every provider along your journey — transport, hotel, activity operator — already knows what you need. You never re-introduce yourself.
+          </p>
+        </div>
+
+        <!-- Go -->
+        <div class="bg-gradient-to-br from-emerald-50 to-teal-50 rounded-3xl p-8 border border-emerald-100 hover:border-emerald-200 hover:-translate-y-1 transition-all duration-300">
+          <div class="w-12 h-12 rounded-2xl bg-emerald-500 flex items-center justify-center text-white font-black text-lg mb-6 shadow-lg shadow-emerald-200">→</div>
+          <div class="text-[10px] font-bold text-emerald-600 uppercase tracking-[0.15em] mb-2">03 · Go</div>
+          <h3 class="text-2xl font-black text-gray-900 mb-4 leading-tight">Fully booked.<br>Curated, not googled.</h3>
+          <p class="text-gray-600 text-sm leading-relaxed">
+            Transport, stay, and activities from real traveler experiences — not sponsored rankings. Inspiration to complete trip in minutes, not hours.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── SOCIAL PROOF ─── -->
+  <section class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-xs font-bold text-gray-400 uppercase tracking-[0.15em] mb-3">Real traveler experiences</p>
+        <h2 class="text-2xl lg:text-3xl font-black text-gray-900">
+          Recommendations from people<br>who actually went.
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div class="text-amber-400 text-sm mb-4 tracking-wide">★★★★★</div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-5">"I showed it a Reel of Hallstatt in autumn. Within minutes I had a train from Vienna, a guesthouse near the lake, and a morning market on the itinerary. The mood didn't die."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-amber-300 to-orange-400 flex-shrink-0"></div>
+            <div>
+              <div class="text-sm font-semibold text-gray-900">Sophie M.</div>
+              <div class="text-xs text-gray-400">Vienna · Solo traveler</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 lg:mt-5">
+          <div class="text-amber-400 text-sm mb-4 tracking-wide">★★★★★</div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-5">"It knew I arrived by train and was hiking solo. The hotel recommended a trail I could walk to from the door. First time that felt like a tip from a friend, not a search engine."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-indigo-300 to-purple-400 flex-shrink-0"></div>
+            <div>
+              <div class="text-sm font-semibold text-gray-900">Lena K.</div>
+              <div class="text-xs text-gray-400">Berlin · Hiker</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div class="text-amber-400 text-sm mb-4 tracking-wide">★★★★★</div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-5">"I was about to book Porto again. A friend sent me a Reel of the Styrian wine route. Twenty minutes later I had a full weekend sorted. Austria won this time."</p>
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-emerald-300 to-teal-400 flex-shrink-0"></div>
+            <div>
+              <div class="text-sm font-semibold text-gray-900">Mia H.</div>
+              <div class="text-xs text-gray-400">Vienna · Young professional</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── MAIN CTA SECTION ─── -->
+  <section id="plan" class="py-24 bg-gray-900 relative overflow-hidden">
+    <div class="absolute inset-0 pointer-events-none">
+      <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full bg-indigo-900/50 blur-[130px]"></div>
+      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full bg-amber-900/25 blur-[100px]"></div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-6">
+      <div class="grid lg:grid-cols-2 gap-20 items-center">
+
+        <!-- Left: Copy + CTA -->
+        <div>
+          <p class="text-amber-400 font-bold text-xs uppercase tracking-[0.15em] mb-5">Start with a Reel</p>
+          <h2 class="text-4xl lg:text-5xl font-black text-white leading-tight mb-6 tracking-tight">
+            See it.<br>
+            <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 to-orange-400">Plan it.</span><br>
+            Go.
+          </h2>
+          <p class="text-white/65 text-lg leading-relaxed mb-10">
+            Drop a Reel link, paste a screenshot, or describe what you saw.
+            Connected Journey assembles the full trip — transport, stay, activities — from Austria's ecosystem. Your context travels with you. You decide who sees what.
+          </p>
+
+          <!-- CTA button with screenshot -->
+          <a href="#" class="group inline-flex items-center gap-5 bg-white hover:bg-amber-50 text-gray-900 rounded-2xl px-6 py-5 shadow-2xl hover:shadow-amber-400/30 hover:-translate-y-1 transition-all duration-300 mb-6">
+            <!-- Screenshot thumbnail in phone shape -->
+            <div class="relative w-12 h-[76px] rounded-2xl overflow-hidden border-2 border-gray-100 flex-shrink-0 shadow-md">
+              <img src="WhatsApp Image 2026-05-20 at 20.07.36.jpeg"
+                   alt="Your Reel"
+                   class="w-full h-full object-cover">
+              <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+              <div class="absolute bottom-1 left-0 right-0 text-center">
+                <span class="text-white text-[7px] font-black tracking-wide">YOUR REEL</span>
+              </div>
+            </div>
+            <div class="text-left">
+              <div class="text-base font-black leading-tight">Plan my trip from this Reel</div>
+              <div class="text-sm text-gray-400 font-normal mt-0.5">Drop any Reel · Get a complete trip</div>
+            </div>
+            <span class="text-amber-500 text-2xl ml-1 group-hover:translate-x-1 transition-transform duration-200">→</span>
+          </a>
+
+          <div class="flex items-start gap-2.5 text-white/35 text-sm max-w-sm">
+            <svg class="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
+            </svg>
+            Your context stays yours. You decide what to share, and with whom. Revoke at any time.
+          </div>
+        </div>
+
+        <!-- Right: Phone with full screenshot + overlay -->
+        <div class="flex justify-center lg:justify-end">
+          <div class="relative">
+            <div class="absolute inset-0 bg-gradient-to-br from-amber-400/10 to-indigo-500/10 rounded-[52px] blur-3xl scale-110"></div>
+
+            <div class="phone-frame relative w-[280px] overflow-hidden">
+              <!-- Status bar -->
+              <div class="absolute top-0 left-0 right-0 z-10 flex justify-between items-center px-6 pt-4 pb-2 bg-black/50 backdrop-blur-sm">
+                <span class="text-white text-xs font-semibold">20:06</span>
+                <span class="text-white text-xs font-medium">4G ▌▌</span>
+              </div>
+
+              <img src="WhatsApp Image 2026-05-20 at 20.07.36.jpeg"
+                   alt="Reel inspiration"
+                   class="w-full pt-7">
+
+              <!-- Connected Journey overlay -->
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/92 to-transparent pt-20 pb-5 px-4">
+                <div class="flex items-center gap-2 mb-3">
+                  <div class="w-6 h-6 rounded-full bg-amber-400 flex items-center justify-center flex-shrink-0">
+                    <span class="text-[10px] font-black text-black">✦</span>
+                  </div>
+                  <span class="text-white/75 text-xs font-medium">Connected Journey</span>
+                  <span class="ml-auto text-emerald-400 text-[11px] font-bold flex items-center gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 inline-block"></span>Live
+                  </span>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/15">
+                  <div class="flex justify-between items-start mb-3">
+                    <div>
+                      <p class="text-white text-sm font-bold">Surin Islands</p>
+                      <p class="text-white/45 text-[11px]">Matched from Reel · worldpitou</p>
+                    </div>
+                    <span class="text-amber-300 text-[11px] font-bold bg-amber-400/15 px-2 py-0.5 rounded-full">3 days</span>
+                  </div>
+
+                  <div class="space-y-1.5 mb-4">
+                    <div class="flex items-center gap-2">
+                      <span class="text-emerald-400 text-xs">✓</span>
+                      <span class="text-white/60 text-xs">Train + Ferry · Bangkok → Ranong</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-emerald-400 text-xs">✓</span>
+                      <span class="text-white/60 text-xs">Eco-bungalow · Beach access</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                      <span class="text-amber-400 text-xs">→</span>
+                      <span class="text-white/60 text-xs">Snorkeling · Market · Sunrise hike</span>
+                    </div>
+                  </div>
+
+                  <button class="w-full bg-amber-400 text-black text-sm font-black rounded-xl py-2.5 hover:bg-amber-300 transition-colors">
+                    Book this trip →
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <div class="absolute -left-8 top-20 bg-emerald-500 text-white text-xs font-black px-3 py-2 rounded-xl shadow-xl -rotate-3 leading-snug">
+              Context<br>shared ✓
+            </div>
+            <div class="absolute -right-8 bottom-36 bg-indigo-600 text-white text-xs font-black px-3 py-2 rounded-xl shadow-xl rotate-3 leading-snug">
+              No forms<br>filled ✓
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── ECOSYSTEM + STATS ─── -->
+  <section class="py-20 bg-white border-t border-gray-100">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-xs font-bold text-gray-400 uppercase tracking-[0.15em] mb-3">Built for Austria's ecosystem</p>
+      <h2 class="text-2xl lg:text-3xl font-black text-gray-900 mb-5">
+        Not another platform.<br>
+        The connective layer between the ones you trust.
+      </h2>
+      <p class="text-gray-500 max-w-2xl mx-auto mb-14 leading-relaxed">
+        Connected Journey coordinates between Austria's existing providers — hotels, transport, activity operators, DMOs.
+        Your context is passed along only with your permission. You own it. You can revoke it. Always.
+      </p>
+
+      <div class="grid grid-cols-3 gap-8 max-w-lg mx-auto">
+        <div class="text-center">
+          <div class="text-4xl font-black text-gray-900 mb-2">1</div>
+          <div class="text-sm text-gray-400">flow from spark to booked</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-black text-gray-900 mb-2">0</div>
+          <div class="text-sm text-gray-400">times you re-introduce yourself</div>
+        </div>
+        <div class="text-center">
+          <div class="text-4xl font-black text-gray-900 mb-2">∞</div>
+          <div class="text-sm text-gray-400">moments Austria can catch</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="bg-gray-950 text-white/50 py-12">
+    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+      <div>
+        <div class="text-white font-black text-xl mb-1">Connected Journey</div>
+        <div class="text-sm">Open Ecosystem Challenge · Österreich Werbung · InnoDays 2026</div>
+      </div>
+      <div class="text-sm text-center md:text-right leading-relaxed">
+        <p class="text-white/70">Your data. Your journey. Your control.</p>
+        <p class="text-white/25 mt-1">GDPR-first · Built on consent · Powered by Austria's ecosystem</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
