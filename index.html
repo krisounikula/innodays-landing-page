@@ -3,164 +3,186 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ReelRoute — Austria</title>
+  <title>Plan your stay from a Reel — Holidays in Austria</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --cream: #F7F3ED; --dark: #1a1612; --warm: #C8A882;
-      --accent: #E8553E; --teal: #2D7D6F; --teal-light: #E0F0ED;
-      --sand: #EDE8DF; --muted: #8a8278;
+      --red: #dc0000;
+      --dark-red: #bd0000;
+      --dark: #2b333f;
+      --muted: #6b7280;
+      --sand: #f5f2ed;
+      --brown: #974d30;
+      --olive: #857741;
+      --teal: #28788f;
+      --forest: #4c7759;
+      --purple: #654b7b;
     }
-    body { font-family: 'DM Sans', sans-serif; }
-    .hero-gradient {
-      background: linear-gradient(135deg, #1a1612 0%, #2a1f1a 60%, #1a1612 100%);
-    }
+    body { font-family: 'Nunito Sans', sans-serif; color: var(--dark); background: #fff; }
+    .lora { font-family: 'Lora', serif; }
     .phone-frame {
+      border-radius: 40px;
+      border: 3px solid rgba(255,255,255,0.15);
+      box-shadow: 0 40px 80px rgba(0,0,0,0.5);
       background: #111;
-      border-radius: 44px;
-      border: 3px solid rgba(255,255,255,0.12);
-      box-shadow: 0 50px 100px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.08);
+      overflow: hidden;
     }
-    .animate-pulse-slow {
-      animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
-    }
-    .playfair { font-family: 'Playfair Display', serif; }
-    .dm-mono { font-family: 'DM Mono', monospace; }
   </style>
 </head>
-<body class="bg-white text-gray-900 antialiased">
+<body class="antialiased">
 
-  <!-- ─── HERO ─── -->
-  <section class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-10 right-10 w-[500px] h-[500px] rounded-full blur-[120px]" style="background: rgba(232,85,62,0.15);"></div>
-      <div class="absolute bottom-10 left-0 w-[400px] h-[400px] rounded-full blur-[100px]" style="background: rgba(45,125,111,0.1);"></div>
-      <div class="absolute top-1/2 left-1/4 w-[300px] h-[300px] rounded-full bg-white/3 blur-[80px]"></div>
+  <!-- ─── AUSTRIA.INFO NAV ─── -->
+  <header>
+    <!-- Top utility bar -->
+    <div class="bg-[#2b333f] text-white/60 text-xs py-2 px-6 flex justify-between items-center">
+      <div class="flex items-center gap-4">
+        <span class="text-white/40">austria.info</span>
+        <span>·</span>
+        <a href="#" class="hover:text-white transition-colors">Experiences</a>
+        <a href="#" class="hover:text-white transition-colors">Destinations</a>
+        <a href="#" class="hover:text-white transition-colors font-semibold text-white">Planning</a>
+        <a href="#" class="hover:text-white transition-colors">Recommendations</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <span>EN</span>
+        <span class="text-white/30">|</span>
+        <span>DE</span>
+      </div>
     </div>
 
-    <div class="relative max-w-7xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center">
+    <!-- Main nav -->
+    <nav class="bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between">
+      <!-- Austria.info logo -->
+      <a href="#" class="flex items-center gap-3">
+        <!-- Austrian flag SVG -->
+        <svg width="36" height="24" viewBox="0 0 36 24" fill="none">
+          <rect width="36" height="8" fill="#dc0000"/>
+          <rect y="8" width="36" height="8" fill="white"/>
+          <rect y="16" width="36" height="8" fill="#dc0000"/>
+        </svg>
+        <div>
+          <div class="lora text-sm font-semibold text-gray-900 leading-tight">Holidays in Austria</div>
+          <div class="text-[10px] text-gray-400 font-light tracking-wide leading-tight">austria.info</div>
+        </div>
+      </a>
 
-      <!-- Left: Headline + CTA -->
+      <!-- Breadcrumb -->
+      <div class="hidden md:flex items-center gap-2 text-sm text-gray-400">
+        <a href="#" class="hover:text-[#dc0000] transition-colors">Home</a>
+        <span>/</span>
+        <a href="#" class="hover:text-[#dc0000] transition-colors">Planning</a>
+        <span>/</span>
+        <span class="text-gray-700 font-medium">Plan your stay from a Reel</span>
+      </div>
+
+      <!-- CTA -->
+      <a href="https://reelroute-phi.vercel.app/" class="hidden md:inline-flex items-center gap-2 bg-[#dc0000] hover:bg-[#bd0000] text-white text-sm font-semibold px-4 py-2 rounded transition-colors">
+        Try it now →
+      </a>
+    </nav>
+  </header>
+
+
+  <!-- ─── HERO ─── -->
+  <section class="relative overflow-hidden" style="background: var(--dark);">
+    <!-- Background image treatment -->
+    <div class="absolute inset-0">
+      <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg"
+           alt="Hallstatt, Austria"
+           class="w-full h-full object-cover opacity-30">
+      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(43,51,63,0.95) 40%, rgba(43,51,63,0.5) 100%);"></div>
+    </div>
+
+    <div class="relative max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center min-h-[560px]">
+
+      <!-- Left -->
       <div>
-        <div class="dm-mono inline-flex items-center gap-2.5 text-xs px-4 py-2 rounded-full mb-10 border border-white/15 backdrop-blur-sm" style="background: rgba(45,125,111,0.2); color: #E0F0ED;">
-          <span class="w-2 h-2 rounded-full animate-pulse-slow" style="background: #2D7D6F;"></span>
-          InnoDays 2026 · Österreich Werbung · Prototype v0.1
+        <div class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full mb-8 border" style="background: rgba(220,0,0,0.2); border-color: rgba(220,0,0,0.4); color: #ff9090;">
+          <span class="w-1.5 h-1.5 rounded-full bg-[#dc0000]"></span>
+          New · Plan your stay
         </div>
 
-        <h1 class="playfair text-5xl lg:text-[3.5rem] font-bold text-white leading-[1.07] mb-7">
-          "I want to go there —<br>
-          <em style="color: var(--accent); font-style: italic;">
-            but I don't know<br>where it is and how."
-          </em>
+        <h1 class="lora text-4xl lg:text-5xl font-semibold text-white leading-[1.1] mb-6">
+          You saw it on a Reel.<br>
+          <em style="color: #ff9090;">Let's turn it into<br>your Austria trip.</em>
         </h1>
 
-        <p class="text-lg text-white/65 mb-10 leading-relaxed max-w-[480px]">
-          You see a place on a Reel. Hooked in four seconds.
-          Then five tabs later, the mood is gone — and you book somewhere else.
-          <span class="text-white/90 font-medium">Austria loses you before the journey even begins.</span>
+        <p class="text-white/65 text-lg leading-relaxed mb-10 max-w-md">
+          Drop a link to any TikTok or Instagram Reel featuring Austria. We identify the destination, build a suggested itinerary, and connect you directly to transport and accommodation.
         </p>
 
-        <!-- Primary CTA with screenshot thumbnail -->
-        <a href="https://reelroute-phi.vercel.app/" class="group inline-flex items-center gap-5 bg-white hover:bg-red-50 text-gray-900 rounded-2xl px-5 py-4 font-semibold shadow-2xl hover:shadow-red-400/25 hover:-translate-y-1 transition-all duration-300 mb-5">
-          <!-- Mini phone + screenshot -->
-          <div class="w-10 h-[68px] rounded-xl overflow-hidden border-2 border-gray-100 flex-shrink-0 shadow-md relative">
-            <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg"
-                 alt="A Reel that starts the journey"
-                 class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+        <a href="https://reelroute-phi.vercel.app/"
+           class="inline-flex items-center gap-4 bg-[#dc0000] hover:bg-[#bd0000] text-white rounded-lg px-6 py-4 font-semibold text-base transition-colors shadow-lg mb-4">
+          <!-- Mini Reel thumbnail -->
+          <div class="w-9 h-14 rounded-lg overflow-hidden border border-white/20 flex-shrink-0">
+            <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="" class="w-full h-full object-cover">
           </div>
-          <div>
-            <div class="text-base font-black leading-tight">Plan my trip from this Reel</div>
-            <div class="text-sm text-gray-400 font-normal mt-0.5">Spark to booked · in minutes</div>
+          <div class="text-left">
+            <div class="font-bold leading-tight">Start from your Reel</div>
+            <div class="text-sm text-white/70 font-normal mt-0.5">Paste any link · Get a full trip</div>
           </div>
-          <span class="text-[#E8553E] text-xl ml-1 group-hover:translate-x-1 transition-transform duration-200">→</span>
+          <span class="text-white/80 text-lg ml-1">→</span>
         </a>
 
-        <p class="text-white/35 text-sm flex items-center gap-2">
-          <svg class="w-3.5 h-3.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-          </svg>
-          Your context, your control. No sign-up required.
+        <p class="text-white/30 text-xs flex items-center gap-1.5 mt-2">
+          <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+          No account needed. Your data stays yours.
         </p>
       </div>
 
-      <!-- Right: Phone mockup with TikTok screenshot + ReelRoute overlay -->
-      <div class="flex justify-center lg:justify-end">
+      <!-- Right: Phone mockup -->
+      <div class="hidden lg:flex justify-end">
         <div class="relative">
-          <div class="absolute inset-0 rounded-[52px] blur-3xl scale-110" style="background: linear-gradient(135deg, rgba(232,85,62,0.15), rgba(45,125,111,0.1));"></div>
-
-          <div class="phone-frame relative w-[280px] overflow-hidden">
+          <div class="phone-frame w-64">
             <!-- Status bar -->
-            <div class="absolute top-0 left-0 right-0 z-10 flex justify-between items-center px-6 pt-4 pb-2 bg-black/40 backdrop-blur-sm">
-              <span class="text-white text-xs font-semibold">20:06</span>
-              <div class="flex items-center gap-1 text-white text-xs">
-                <span>4G</span>
-                <svg class="w-4 h-3 ml-0.5" viewBox="0 0 20 14" fill="white">
-                  <rect x="0" y="6" width="3" height="8" rx="1"/>
-                  <rect x="5" y="4" width="3" height="10" rx="1"/>
-                  <rect x="10" y="2" width="3" height="12" rx="1"/>
-                  <rect x="15" y="0" width="3" height="14" rx="1" opacity="0.35"/>
-                </svg>
-              </div>
+            <div class="flex justify-between items-center px-5 pt-4 pb-2 text-white text-[11px] bg-black/40">
+              <span class="font-semibold">20:17</span>
+              <span>4G ▌▌</span>
             </div>
-
-            <!-- The Reel screenshot -->
-            <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg"
-                 alt="A Reel that sparked the journey"
-                 class="w-full pt-7">
-
-            <!-- ReelRoute overlay activating -->
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/92 to-transparent pt-20 pb-5 px-4">
-              <div class="flex items-center gap-2 mb-3">
-                <div class="w-6 h-6 rounded-full flex items-center justify-center flex-shrink-0" style="background: var(--accent);">
-                  <span class="text-[10px] font-black text-white">R</span>
+            <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="Hallstatt Reel" class="w-full">
+            <!-- Overlay -->
+            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/90 to-transparent pt-16 pb-4 px-4">
+              <div class="flex items-center gap-2 mb-2.5">
+                <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: #dc0000;">
+                  <svg width="10" height="10" viewBox="0 0 36 24" fill="white"><rect width="36" height="8"/><rect y="8" width="36" height="8" fill="transparent"/><rect y="16" width="36" height="8"/></svg>
                 </div>
-                <span class="text-white/75 text-xs font-medium dm-mono">Reel<span style="color: var(--accent);">Route</span></span>
-                <span class="ml-auto text-xs font-semibold flex items-center gap-1 dm-mono" style="color: #2D7D6F;">
-                  <span class="w-1.5 h-1.5 rounded-full inline-block" style="background: #2D7D6F;"></span>Live
-                </span>
+                <span class="text-white/70 text-xs font-medium">austria.info</span>
+                <span class="ml-auto text-[10px] font-semibold" style="color: #4c7759;">● Matched</span>
               </div>
-
-              <div class="bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/15">
-                <div class="flex justify-between items-start mb-3">
+              <div class="bg-white/10 backdrop-blur-xl rounded-xl p-3 border border-white/15">
+                <div class="flex justify-between items-start mb-2">
                   <div>
-                    <p class="text-white text-sm font-bold">Hallstatt, Austria</p>
-                    <p class="text-white/45 text-xs">Matched from Reel · butnomatter</p>
+                    <p class="text-white text-sm font-bold">Hallstatt, Salzkammergut</p>
+                    <p class="text-white/40 text-[10px]">Detected from Reel · butnomatter</p>
                   </div>
-                  <span class="text-xs font-bold px-2 py-0.5 rounded-full dm-mono" style="background: rgba(45,125,111,0.25); color: #E0F0ED;">2 days</span>
+                  <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full" style="background: rgba(220,0,0,0.25); color: #ff9090;">2 days</span>
                 </div>
-
-                <div class="space-y-1.5 mb-4">
-                  <div class="flex items-center gap-2">
-                    <span class="text-white text-xs font-bold">✓</span>
-                    <span class="text-white/65 text-xs">Train · Vienna → Hallstatt · 3h</span>
+                <div class="space-y-1 mb-3">
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-white/80 text-[10px]">🚆</span>
+                    <span class="text-white/55 text-[10px]">Vienna → Hallstatt · ÖBB · 3h</span>
                   </div>
-                  <div class="flex items-center gap-2">
-                    <span class="text-white text-xs font-bold">✓</span>
-                    <span class="text-white/65 text-xs">Lakeside guesthouse · Village centre</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-white/80 text-[10px]">🏨</span>
+                    <span class="text-white/55 text-[10px]">Lakeside guesthouse · from €89</span>
                   </div>
-                  <div class="flex items-center gap-2">
-                    <span class="text-red-300 text-xs font-bold">→</span>
-                    <span class="text-white/65 text-xs">Local market · Salt mine · Morning hike</span>
+                  <div class="flex items-center gap-1.5">
+                    <span class="text-white/80 text-[10px]">🎡</span>
+                    <span class="text-white/55 text-[10px]">Salt mine · Local market · Hike</span>
                   </div>
                 </div>
-
-                <button class="w-full text-white text-sm font-black rounded-xl py-2.5 transition-colors" style="background: var(--accent);">
-                  Book this trip →
+                <button class="w-full text-white text-xs font-bold rounded-lg py-2 transition-colors" style="background: #dc0000;">
+                  View full itinerary →
                 </button>
-
               </div>
             </div>
           </div>
 
-          <!-- Floating badges -->
-          <div class="absolute -left-7 top-20 text-white text-xs font-black px-3 py-2 rounded-xl shadow-xl -rotate-3 leading-snug" style="background: var(--accent);">
-            Context<br>shared ✓
-          </div>
-          <div class="absolute -right-7 bottom-36 bg-gray-900 text-white text-xs font-black px-3 py-2 rounded-xl shadow-xl rotate-3 leading-snug">
-            No forms<br>filled ✓
+          <!-- Floating badge -->
+          <div class="absolute -left-8 top-16 bg-white text-xs font-bold px-3 py-2 rounded-xl shadow-xl -rotate-3 leading-snug" style="color: #dc0000;">
+            Hallstatt<br>identified ✓
           </div>
         </div>
       </div>
@@ -169,61 +191,62 @@
 
 
   <!-- ─── STATS STRIP ─── -->
-  <section class="py-14 bg-white border-y border-gray-100">
+  <section class="py-12 bg-white border-b border-gray-100">
     <div class="max-w-4xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-8 md:gap-0 md:divide-x divide-gray-100">
-
+      <div class="grid md:grid-cols-2 gap-8 md:gap-0 md:divide-x divide-gray-200">
         <div class="flex flex-col items-center text-center md:pr-12">
-          <div class="playfair text-6xl font-bold mb-3" style="color: var(--accent);">75%</div>
-          <p class="text-gray-700 font-medium mb-1 leading-snug">of travelers use social media<br>for travel inspiration</p>
-          <a href="https://www.statista.com/chart/31921/social-media-and-travel-opinions/" target="_blank" rel="noopener" class="dm-mono text-xs mt-2" style="color: var(--muted);">Statista global survey →</a>
+          <div class="lora text-6xl font-semibold mb-3" style="color: #dc0000;">75%</div>
+          <p class="text-gray-700 font-medium leading-snug mb-1">of travelers use social media<br>for travel inspiration</p>
+          <a href="https://www.statista.com/chart/31921/social-media-and-travel-opinions/" target="_blank" rel="noopener" class="text-xs mt-1.5" style="color: var(--muted);">Statista global survey →</a>
         </div>
-
         <div class="flex flex-col items-center text-center md:pl-12">
-          <div class="playfair text-6xl font-bold mb-3" style="color: var(--dark);">277</div>
-          <p class="text-gray-700 font-medium mb-1 leading-snug">websites visited on average<br>to plan a single trip</p>
-          <a href="https://www.linkedin.com/posts/jeremyjauncey_one-of-the-bizarre-aspects-of-the-travel-activity-7272184536631857153-AVo0/" target="_blank" rel="noopener" class="dm-mono text-xs mt-2" style="color: var(--muted);">Travel industry research →</a>
+          <div class="lora text-6xl font-semibold mb-3" style="color: var(--dark);">277</div>
+          <p class="text-gray-700 font-medium leading-snug mb-1">websites visited on average<br>to plan a single trip</p>
+          <a href="https://www.linkedin.com/posts/jeremyjauncey_one-of-the-bizarre-aspects-of-the-travel-activity-7272184536631857153-AVo0/" target="_blank" rel="noopener" class="text-xs mt-1.5" style="color: var(--muted);">Travel industry research →</a>
         </div>
-
       </div>
-      <p class="text-center dm-mono text-xs mt-10" style="color: var(--muted);">The inspiration is there. The path from it to a booked trip is broken.</p>
+      <p class="text-center text-sm mt-8" style="color: var(--muted);">The inspiration is there. The path from it to a booked Austria trip is broken. We fix that.</p>
     </div>
   </section>
 
+
   <!-- ─── THE BREAK IN THE JOURNEY ─── -->
-  <section class="py-20 bg-gray-50">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <p class="dm-mono text-xs font-bold uppercase tracking-[0.15em] mb-3" style="color: var(--muted);">Why Austria loses guests today</p>
-      <h2 class="text-3xl lg:text-4xl font-black text-gray-900 mb-12">
-        The journey that breaks <em class="playfair" style="color: var(--accent);">every time</em>
-      </h2>
+  <section class="py-20" style="background: var(--sand);">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-xs font-bold uppercase tracking-[0.15em] mb-3" style="color: var(--muted);">Why Austria loses guests today</p>
+        <h2 class="lora text-3xl lg:text-4xl font-semibold text-gray-900">
+          The journey that <em style="color: #dc0000;">breaks every time</em>
+        </h2>
+      </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3">
         <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-left">
-          <div class="w-8 h-8 rounded-lg bg-red-100 text-[#E8553E] font-black text-sm flex items-center justify-center mb-4">1</div>
-          <div class="text-sm font-bold text-[#E8553E] mb-1.5">Spark</div>
+          <div class="w-8 h-8 rounded-lg font-bold text-sm flex items-center justify-center mb-4 text-white" style="background: #dc0000;">1</div>
+          <div class="text-sm font-bold mb-1.5" style="color: #dc0000;">Spark</div>
           <p class="text-sm text-gray-500 leading-relaxed">She sees a Reel of Hallstatt. Hooked in 4 seconds.</p>
         </div>
 
-        <!-- Delay connector -->
         <div class="bg-white rounded-2xl p-5 shadow-sm border border-dashed border-gray-200 text-left">
-          <div class="w-8 h-8 rounded-lg bg-gray-100 text-gray-400 font-black text-sm flex items-center justify-center mb-4">···</div>
-          <div class="dm-mono text-sm font-bold text-gray-400 mb-1.5">Delay</div>
+          <div class="w-8 h-8 rounded-lg bg-gray-100 text-gray-400 font-bold text-sm flex items-center justify-center mb-4">···</div>
+          <div class="text-sm font-bold text-gray-400 mb-1.5">Delay</div>
           <p class="text-sm text-gray-400 leading-relaxed">She saves it. Life happens. Days later she tries to plan it.</p>
         </div>
 
         <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-left">
-          <div class="w-8 h-8 rounded-lg bg-orange-50 text-orange-500 font-black text-sm flex items-center justify-center mb-4">2</div>
-          <div class="text-sm font-bold text-orange-500 mb-1.5">Confusion</div>
+          <div class="w-8 h-8 rounded-lg font-bold text-sm flex items-center justify-center mb-4 text-white" style="background: #974d30;">2</div>
+          <div class="text-sm font-bold mb-1.5" style="color: #974d30;">Confusion</div>
           <p class="text-sm text-gray-500 leading-relaxed">Five tabs. Trains, hotels, maps — context resets every time.</p>
         </div>
+
         <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-left">
-          <div class="w-8 h-8 rounded-lg bg-red-100 text-red-600 font-black text-sm flex items-center justify-center mb-4">3</div>
-          <div class="text-sm font-bold text-red-500 mb-1.5">Friction</div>
+          <div class="w-8 h-8 rounded-lg font-bold text-sm flex items-center justify-center mb-4 text-white" style="background: #6e5642;">3</div>
+          <div class="text-sm font-bold mb-1.5" style="color: #6e5642;">Friction</div>
           <p class="text-sm text-gray-500 leading-relaxed">Generic results. No platform knows she came from a Reel.</p>
         </div>
+
         <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100/50 bg-gray-50/50 text-left">
-          <div class="w-8 h-8 rounded-lg bg-gray-200 text-gray-500 font-black text-sm flex items-center justify-center mb-4">4</div>
+          <div class="w-8 h-8 rounded-lg bg-gray-200 text-gray-500 font-bold text-sm flex items-center justify-center mb-4">4</div>
           <div class="text-sm font-bold text-gray-400 mb-1.5">Loss</div>
           <p class="text-sm text-gray-400 leading-relaxed">She books Porto. <strong class="text-gray-600">Austria never had a chance.</strong></p>
         </div>
@@ -232,46 +255,51 @@
   </section>
 
 
-  <!-- ─── THREE BENEFITS: Discover → Plan → Go ─── -->
+  <!-- ─── HOW IT WORKS ─── -->
   <section class="py-24 bg-white">
     <div class="max-w-5xl mx-auto px-6">
       <div class="text-center mb-16">
-        <p class="dm-mono text-xs font-bold uppercase tracking-[0.15em] mb-3" style="color: var(--muted);">How it works</p>
-        <h2 class="text-3xl lg:text-4xl font-black text-gray-900">
-          Drop the Reel.<br>
-          <em class="playfair" style="color: var(--accent); font-style: italic;">Get the trip.</em>
+        <p class="text-xs font-bold uppercase tracking-[0.15em] mb-3" style="color: var(--muted);">How it works</p>
+        <h2 class="lora text-3xl lg:text-4xl font-semibold text-gray-900">
+          Drop the Reel. <em style="color: #dc0000;">Get the trip.</em>
         </h2>
       </div>
 
       <div class="grid lg:grid-cols-3 gap-8">
 
         <!-- Discover -->
-        <div class="rounded-3xl p-8 border hover:-translate-y-1 transition-all duration-300" style="background: linear-gradient(135deg, #fff8f6, #fff2ee); border-color: rgba(232,85,62,0.15);">
-          <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-white font-black text-lg mb-6 shadow-lg" style="background: var(--accent);">✦</div>
-          <div class="dm-mono text-[10px] font-bold uppercase tracking-[0.15em] mb-2" style="color: var(--accent);">01 · Discover</div>
-          <h3 class="playfair text-2xl font-bold text-gray-900 mb-4 leading-tight">Spot it on a Reel.<br>We catch the moment.</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            The moment you're inspired — a Reel, a photo, a friend's story — ReelRoute captures the spark before the mood disappears.
+        <div class="rounded-2xl p-8 border border-gray-100 hover:-translate-y-1 transition-all duration-300 bg-white shadow-sm">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6 shadow" style="background: #dc0000;">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+          </div>
+          <div class="text-[10px] font-bold uppercase tracking-[0.15em] mb-2" style="color: #dc0000;">01 · Discover</div>
+          <h3 class="lora text-xl font-semibold text-gray-900 mb-4 leading-tight">Spot it on a Reel.<br>Paste the link.</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            Found a place on TikTok or Instagram? Paste the link into the tool. ReelRoute identifies the Austrian destination in seconds.
           </p>
         </div>
 
         <!-- Match -->
-        <div class="rounded-3xl p-8 border hover:-translate-y-1 transition-all duration-300 lg:mt-8" style="background: linear-gradient(135deg, #f0f9f7, #e8f5f2); border-color: rgba(45,125,111,0.2);">
-          <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-white font-black text-lg mb-6 shadow-lg" style="background: var(--teal);">◎</div>
-          <div class="dm-mono text-[10px] font-bold uppercase tracking-[0.15em] mb-2" style="color: var(--teal);">02 · Match</div>
-          <h3 class="playfair text-2xl font-bold text-gray-900 mb-4 leading-tight">We read the Reel.<br>You get a trip.</h3>
+        <div class="rounded-2xl p-8 border hover:-translate-y-1 transition-all duration-300 shadow-sm lg:mt-8" style="background: #f5f2ed; border-color: #e5dfd4;">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6 shadow" style="background: #4c7759;">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 9m0 8V9m0 0L9 7"/></svg>
+          </div>
+          <div class="text-[10px] font-bold uppercase tracking-[0.15em] mb-2" style="color: #4c7759;">02 · Match</div>
+          <h3 class="lora text-xl font-semibold text-gray-900 mb-4 leading-tight">We read the Reel.<br>You get a trip.</h3>
           <p class="text-gray-600 text-sm leading-relaxed">
-            Paste the link. ReelRoute identifies the destination, reads the vibe, and builds a suggested holiday — transport, stay, and things to do — tailored to what you saw.
+            The tool reads the vibe, identifies the location, and builds a suggested itinerary — transport, stay, and activities — tailored to what you saw.
           </p>
         </div>
 
-        <!-- Go -->
-        <div class="rounded-3xl p-8 border hover:-translate-y-1 transition-all duration-300" style="background: linear-gradient(135deg, #1a1612, #2a1f1a); border-color: rgba(232,85,62,0.2);">
-          <div class="w-12 h-12 rounded-2xl flex items-center justify-center text-white font-black text-lg mb-6 shadow-lg" style="background: var(--accent);">→</div>
-          <div class="dm-mono text-[10px] font-bold uppercase tracking-[0.15em] mb-2" style="color: var(--accent);">03 · Go</div>
-          <h3 class="playfair text-2xl font-bold text-white mb-4 leading-tight">One tap to book.<br>Trip complete.</h3>
-          <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.6);">
-            Review the suggested trip and book directly — flights, trains, accommodation. From the Reel you saved days ago to a confirmed itinerary in minutes.
+        <!-- Book -->
+        <div class="rounded-2xl p-8 border hover:-translate-y-1 transition-all duration-300 shadow-sm" style="background: #2b333f; border-color: #3d4a58;">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6 shadow" style="background: #dc0000;">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+          </div>
+          <div class="text-[10px] font-bold uppercase tracking-[0.15em] mb-2" style="color: #ff9090;">03 · Book</div>
+          <h3 class="lora text-xl font-semibold text-white mb-4 leading-tight">One tap to book.<br>Trip confirmed.</h3>
+          <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.55);">
+            Review the suggested trip and book directly — ÖBB trains, flights, accommodation via austria.info partners. From saved Reel to confirmed itinerary in minutes.
           </p>
         </div>
 
@@ -281,21 +309,21 @@
 
 
   <!-- ─── SOCIAL PROOF ─── -->
-  <section class="py-20 bg-gray-50">
+  <section class="py-20" style="background: var(--sand);">
     <div class="max-w-4xl mx-auto px-6">
       <div class="text-center mb-12">
-        <p class="dm-mono text-xs font-bold uppercase tracking-[0.15em] mb-3" style="color: var(--muted);">Real traveler experiences</p>
-        <h2 class="text-2xl lg:text-3xl font-black text-gray-900">
-          Recommendations from people<br>who actually went.
+        <p class="text-xs font-bold uppercase tracking-[0.15em] mb-3" style="color: var(--muted);">Traveler stories</p>
+        <h2 class="lora text-2xl lg:text-3xl font-semibold text-gray-900">
+          Real people. Real Austria trips.
         </h2>
       </div>
 
       <div class="grid lg:grid-cols-3 gap-6">
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div class="text-[#E8553E] text-sm mb-4 tracking-wide">★★★★★</div>
+          <div class="text-sm mb-4" style="color: #dc0000;">★★★★★</div>
           <p class="text-gray-700 text-sm leading-relaxed mb-5">"I showed it a Reel of Hallstatt in autumn. Within minutes I had a train from Vienna, a guesthouse near the lake, and a morning market on the itinerary. The mood didn't die."</p>
           <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-red-300 to-red-500 flex-shrink-0"></div>
+            <div class="w-9 h-9 rounded-full flex-shrink-0" style="background: linear-gradient(135deg, #dc0000, #974d30);"></div>
             <div>
               <div class="text-sm font-semibold text-gray-900">Sophie M.</div>
               <div class="text-xs text-gray-400">Vienna · Solo traveler</div>
@@ -304,22 +332,22 @@
         </div>
 
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 lg:mt-5">
-          <div class="text-[#E8553E] text-sm mb-4 tracking-wide">★★★★★</div>
-          <p class="text-gray-700 text-sm leading-relaxed mb-5">"It knew I arrived by train and was hiking solo. The hotel recommended a trail I could walk to from the door. First time that felt like a tip from a friend, not a search engine."</p>
+          <div class="text-sm mb-4" style="color: #dc0000;">★★★★★</div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-5">"I pasted a Reel of the Wachau wine region. It found the village, suggested a train from Vienna, and showed me three family guesthouses. My parents loved it."</p>
           <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-gray-400 to-gray-600 flex-shrink-0"></div>
+            <div class="w-9 h-9 rounded-full flex-shrink-0" style="background: linear-gradient(135deg, #857741, #4c7759);"></div>
             <div>
               <div class="text-sm font-semibold text-gray-900">Lena K.</div>
-              <div class="text-xs text-gray-400">Berlin · Hiker</div>
+              <div class="text-xs text-gray-400">Berlin · Family trip</div>
             </div>
           </div>
         </div>
 
         <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div class="text-[#E8553E] text-sm mb-4 tracking-wide">★★★★★</div>
-          <p class="text-gray-700 text-sm leading-relaxed mb-5">"I was about to book Porto again. A friend sent me a Reel of the Styrian wine route. Twenty minutes later I had a full weekend sorted. Austria won this time."</p>
+          <div class="text-sm mb-4" style="color: #dc0000;">★★★★★</div>
+          <p class="text-gray-700 text-sm leading-relaxed mb-5">"I was about to book Porto. A friend sent me a Reel of the Styrian wine route. Twenty minutes later I had a full weekend confirmed. Austria won this time."</p>
           <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full bg-gradient-to-br from-red-400 to-red-700 flex-shrink-0"></div>
+            <div class="w-9 h-9 rounded-full flex-shrink-0" style="background: linear-gradient(135deg, #28788f, #654b7b);"></div>
             <div>
               <div class="text-sm font-semibold text-gray-900">Mia H.</div>
               <div class="text-xs text-gray-400">Vienna · Young professional</div>
@@ -331,119 +359,87 @@
   </section>
 
 
-  <!-- ─── MAIN CTA SECTION ─── -->
-  <section id="plan" class="py-24 relative overflow-hidden" style="background: var(--dark);">
-    <div class="absolute inset-0 pointer-events-none">
-      <div class="absolute top-0 right-0 w-[600px] h-[600px] rounded-full blur-[130px]" style="background: rgba(232,85,62,0.12);"></div>
-      <div class="absolute bottom-0 left-0 w-[400px] h-[400px] rounded-full blur-[100px]" style="background: rgba(45,125,111,0.08);"></div>
+  <!-- ─── CTA ─── -->
+  <section class="py-24 relative overflow-hidden" style="background: var(--dark);">
+    <div class="absolute inset-0">
+      <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="" class="w-full h-full object-cover opacity-10">
+      <div class="absolute inset-0" style="background: rgba(43,51,63,0.92);"></div>
     </div>
 
     <div class="relative max-w-6xl mx-auto px-6">
       <div class="grid lg:grid-cols-2 gap-20 items-center">
 
-        <!-- Left: Copy + CTA -->
+        <!-- Left -->
         <div>
-          <p class="dm-mono font-bold text-xs uppercase tracking-[0.15em] mb-5" style="color: var(--teal);">Start with a Reel</p>
-          <h2 class="playfair text-4xl lg:text-5xl font-bold text-white leading-tight mb-6">
+          <p class="text-xs font-bold uppercase tracking-[0.15em] mb-5" style="color: #ff9090;">Ready to plan?</p>
+          <h2 class="lora text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6">
             See it.<br>
-            <em style="color: var(--accent); font-style: italic;">Plan it.</em><br>
-            Go.
+            <em style="color: #ff9090;">Plan it.</em><br>
+            Book it.
           </h2>
-          <p class="text-white/65 text-lg leading-relaxed mb-10">
-            Drop a Reel link, paste a screenshot, or describe what you saw.
-            ReelRoute assembles the full trip — transport, stay, activities — from Austria's ecosystem. Your context travels with you. You decide who sees what.
+          <p class="text-white/60 text-lg leading-relaxed mb-10">
+            Paste any Reel featuring Austria and get a complete, bookable trip in minutes. Powered by <span class="text-white/80 font-medium">ReelRoute</span> — built for austria.info at InnoDays 2026.
           </p>
 
-          <!-- CTA button with screenshot -->
-          <a href="https://reelroute-phi.vercel.app/" class="group inline-flex items-center gap-5 bg-white text-gray-900 rounded-2xl px-6 py-5 shadow-2xl hover:-translate-y-1 transition-all duration-300 mb-6" style="hover:background: #fff8f6;">
-            <!-- Screenshot thumbnail in phone shape -->
-            <div class="relative w-12 h-[76px] rounded-2xl overflow-hidden border-2 border-gray-100 flex-shrink-0 shadow-md">
-              <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg"
-                   alt="Your Reel"
-                   class="w-full h-full object-cover">
+          <a href="https://reelroute-phi.vercel.app/"
+             class="group inline-flex items-center gap-5 bg-white text-gray-900 rounded-xl px-6 py-5 shadow-2xl hover:-translate-y-1 transition-all duration-300 mb-6">
+            <div class="relative w-12 h-[76px] rounded-xl overflow-hidden border-2 border-gray-100 flex-shrink-0 shadow-md">
+              <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="Your Reel" class="w-full h-full object-cover">
               <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
               <div class="absolute bottom-1 left-0 right-0 text-center">
-                <span class="text-white text-[7px] font-black tracking-wide">YOUR REEL</span>
+                <span class="text-white text-[7px] font-bold tracking-wide">YOUR REEL</span>
               </div>
             </div>
             <div class="text-left">
-              <div class="text-base font-black leading-tight">Plan my trip from this Reel</div>
+              <div class="text-base font-bold leading-tight">Plan my trip from this Reel</div>
               <div class="text-sm text-gray-400 font-normal mt-0.5">Drop any Reel · Get a complete trip</div>
             </div>
-            <span class="text-[#E8553E] text-2xl ml-1 group-hover:translate-x-1 transition-transform duration-200">→</span>
+            <span class="text-xl ml-1 group-hover:translate-x-1 transition-transform" style="color: #dc0000;">→</span>
           </a>
 
-          <div class="flex items-start gap-2.5 text-white/35 text-sm max-w-sm">
-            <svg class="w-4 h-4 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
-            </svg>
-            Your context stays yours. You decide what to share, and with whom. Revoke at any time.
-          </div>
+          <p class="text-white/30 text-xs flex items-start gap-2">
+            <svg class="w-3.5 h-3.5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
+            GDPR-first. Your data stays yours. You decide what to share, and with whom.
+          </p>
         </div>
 
-        <!-- Right: Phone with full screenshot + overlay -->
-        <div class="flex justify-center lg:justify-end">
+        <!-- Right: Phone -->
+        <div class="hidden lg:flex justify-end">
           <div class="relative">
-            <div class="absolute inset-0 bg-gradient-to-br from-red-500/10 to-red-900/10 rounded-[52px] blur-3xl scale-110"></div>
-
-            <div class="phone-frame relative w-[280px] overflow-hidden">
-              <!-- Status bar -->
-              <div class="absolute top-0 left-0 right-0 z-10 flex justify-between items-center px-6 pt-4 pb-2 bg-black/50 backdrop-blur-sm">
-                <span class="text-white text-xs font-semibold">20:06</span>
-                <span class="text-white text-xs font-medium">4G ▌▌</span>
+            <div class="phone-frame w-[260px]">
+              <div class="flex justify-between items-center px-5 pt-4 pb-2 text-white text-[11px] bg-black/50">
+                <span class="font-semibold">20:17</span>
+                <span>4G ▌▌</span>
               </div>
-
-              <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg"
-                   alt="Reel inspiration"
-                   class="w-full pt-7">
-
-              <!-- ReelRoute overlay -->
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/92 to-transparent pt-20 pb-5 px-4">
-                <div class="flex items-center gap-2 mb-3">
-                  <div class="w-6 h-6 rounded-full bg-[#E8553E] flex items-center justify-center flex-shrink-0">
-                    <span class="text-[10px] font-black text-white">✦</span>
-                  </div>
-                  <span class="text-white/75 text-xs font-medium">ReelRoute</span>
-                  <span class="ml-auto text-red-300 text-[11px] font-bold flex items-center gap-1">
-                    <span class="w-1.5 h-1.5 rounded-full bg-red-300 inline-block"></span>Live
-                  </span>
+              <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="" class="w-full pt-1">
+              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/90 to-transparent pt-16 pb-4 px-4">
+                <div class="flex items-center gap-2 mb-2.5">
+                  <svg width="16" height="11" viewBox="0 0 36 24" fill="none" class="flex-shrink-0">
+                    <rect width="36" height="8" fill="#dc0000"/>
+                    <rect y="8" width="36" height="8" fill="white"/>
+                    <rect y="16" width="36" height="8" fill="#dc0000"/>
+                  </svg>
+                  <span class="text-white/70 text-[11px] font-medium">austria.info</span>
+                  <span class="ml-auto text-[10px] font-semibold" style="color: #4c7759;">● Live</span>
                 </div>
-
-                <div class="bg-white/10 backdrop-blur-xl rounded-2xl p-4 border border-white/15">
-                  <div class="flex justify-between items-start mb-3">
+                <div class="bg-white/10 backdrop-blur-xl rounded-xl p-3 border border-white/15">
+                  <div class="flex justify-between items-start mb-2">
                     <div>
-                      <p class="text-white text-sm font-bold">Hallstatt, Austria</p>
-                      <p class="text-white/45 text-[11px]">Matched from Reel · butnomatter</p>
+                      <p class="text-white text-sm font-bold">Hallstatt, Salzkammergut</p>
+                      <p class="text-white/40 text-[10px]">Detected · butnomatter</p>
                     </div>
-                    <span class="text-red-200 text-[11px] font-bold bg-red-400/20 px-2 py-0.5 rounded-full">2 days</span>
+                    <span class="text-[10px] font-semibold px-1.5 py-0.5 rounded-full" style="background: rgba(220,0,0,0.25); color: #ff9090;">2 days</span>
                   </div>
-
-                  <div class="space-y-1.5 mb-4">
-                    <div class="flex items-center gap-2">
-                      <span class="text-white text-xs">✓</span>
-                      <span class="text-white/60 text-xs">Train · Vienna → Hallstatt · 3h</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                      <span class="text-white text-xs">✓</span>
-                      <span class="text-white/60 text-xs">Lakeside guesthouse · Village centre</span>
-                    </div>
-                    <div class="flex items-center gap-2">
-                      <span class="text-red-300 text-xs">→</span>
-                      <span class="text-white/60 text-xs">Local market · Salt mine · Morning hike</span>
-                    </div>
+                  <div class="space-y-1 mb-3">
+                    <div class="flex items-center gap-1.5"><span class="text-white text-[10px]">✓</span><span class="text-white/55 text-[10px]">Train · Vienna → Hallstatt · 3h</span></div>
+                    <div class="flex items-center gap-1.5"><span class="text-white text-[10px]">✓</span><span class="text-white/55 text-[10px]">Lakeside guesthouse · from €89</span></div>
+                    <div class="flex items-center gap-1.5"><span class="text-white/40 text-[10px]">→</span><span class="text-white/55 text-[10px]">Salt mine · Market · Morning hike</span></div>
                   </div>
-
-                  <button class="w-full bg-white text-[#E8553E] text-sm font-black rounded-xl py-2.5 hover:bg-red-50 transition-colors">
-                    Book this trip →
-                  </button>
+                  <button class="w-full text-white text-xs font-bold rounded-lg py-2" style="background: #dc0000;">Book this trip →</button>
                 </div>
               </div>
             </div>
-
-            <div class="absolute -left-8 top-20 text-white text-xs font-black px-3 py-2 rounded-xl shadow-xl -rotate-3 leading-snug" style="background: var(--accent);">
-              Context<br>shared ✓
-            </div>
-            <div class="absolute -right-8 bottom-36 bg-gray-900 text-white text-xs font-black px-3 py-2 rounded-xl shadow-xl rotate-3 leading-snug">
+            <div class="absolute -right-8 bottom-32 bg-white text-xs font-bold px-3 py-2 rounded-xl shadow-xl rotate-3 leading-snug" style="color: #2b333f;">
               No forms<br>filled ✓
             </div>
           </div>
@@ -454,47 +450,64 @@
   </section>
 
 
-  <!-- ─── ECOSYSTEM + STATS ─── -->
-  <section class="py-20 bg-white border-t border-gray-100">
-    <div class="max-w-4xl mx-auto px-6 text-center">
-      <p class="dm-mono text-xs font-bold uppercase tracking-[0.15em] mb-3" style="color: var(--muted);">Built for Austria's ecosystem</p>
-      <h2 class="text-2xl lg:text-3xl font-black text-gray-900 mb-5">
-        Not another platform.<br>
-        The connective layer between the ones you trust.
-      </h2>
-      <p class="text-gray-500 max-w-2xl mx-auto mb-14 leading-relaxed">
-        ReelRoute coordinates between Austria's existing providers — hotels, transport, activity operators, DMOs.
-        Your context is passed along only with your permission. You own it. You can revoke it. Always.
-      </p>
+  <!-- ─── AUSTRIA.INFO FOOTER ─── -->
+  <footer style="background: #2b333f;" class="text-white/50 pt-16 pb-8">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="grid md:grid-cols-4 gap-10 mb-12">
+        <div>
+          <div class="flex items-center gap-3 mb-4">
+            <svg width="32" height="21" viewBox="0 0 36 24" fill="none">
+              <rect width="36" height="8" fill="#dc0000"/>
+              <rect y="8" width="36" height="8" fill="white"/>
+              <rect y="16" width="36" height="8" fill="#dc0000"/>
+            </svg>
+            <div>
+              <div class="lora text-sm font-semibold text-white leading-tight">Holidays in Austria</div>
+              <div class="text-[10px] text-white/30 leading-tight">austria.info</div>
+            </div>
+          </div>
+          <p class="text-xs text-white/40 leading-relaxed">Your holiday. Your adventure. Discover Austria's destinations, experiences, and culture.</p>
+        </div>
 
-      <div class="grid grid-cols-3 gap-8 max-w-lg mx-auto">
-        <div class="text-center">
-          <div class="text-4xl font-black text-gray-900 mb-2">1</div>
-          <div class="text-sm text-gray-400">flow from spark to booked</div>
+        <div>
+          <div class="text-xs font-bold uppercase tracking-widest text-white/30 mb-4">Experiences</div>
+          <div class="space-y-2 text-sm">
+            <div><a href="#" class="hover:text-white transition-colors">Summer Activities</a></div>
+            <div><a href="#" class="hover:text-white transition-colors">Winter Activities</a></div>
+            <div><a href="#" class="hover:text-white transition-colors">Cities & Culture</a></div>
+            <div><a href="#" class="hover:text-white transition-colors">Nature & Scenery</a></div>
+          </div>
         </div>
-        <div class="text-center">
-          <div class="text-4xl font-black text-gray-900 mb-2">0</div>
-          <div class="text-sm text-gray-400">times you re-introduce yourself</div>
+
+        <div>
+          <div class="text-xs font-bold uppercase tracking-widest text-white/30 mb-4">Destinations</div>
+          <div class="space-y-2 text-sm">
+            <div><a href="#" class="hover:text-white transition-colors">Vienna</a></div>
+            <div><a href="#" class="hover:text-white transition-colors">Salzkammergut</a></div>
+            <div><a href="#" class="hover:text-white transition-colors">Tyrol</a></div>
+            <div><a href="#" class="hover:text-white transition-colors">Styria</a></div>
+          </div>
         </div>
-        <div class="text-center">
-          <div class="text-4xl font-black text-gray-900 mb-2">∞</div>
-          <div class="text-sm text-gray-400">moments Austria can catch</div>
+
+        <div>
+          <div class="text-xs font-bold uppercase tracking-widest text-white/30 mb-4">Planning</div>
+          <div class="space-y-2 text-sm">
+            <div><a href="https://reelroute-phi.vercel.app/" class="hover:text-white transition-colors font-semibold" style="color: #ff9090;">Plan from a Reel ✦</a></div>
+            <div><a href="#" class="hover:text-white transition-colors">Travel Tips</a></div>
+            <div><a href="#" class="hover:text-white transition-colors">Getting There</a></div>
+            <div><a href="#" class="hover:text-white transition-colors">Accommodation</a></div>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
 
-
-  <!-- ─── FOOTER ─── -->
-  <footer class="bg-gray-950 text-white/50 py-12">
-    <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-      <div>
-        <div class="playfair text-white text-xl font-bold mb-1">Reel<span style="color: var(--accent)">Route</span></div>
-        <div class="text-sm">Open Ecosystem Challenge · Österreich Werbung · InnoDays 2026</div>
-      </div>
-      <div class="text-sm text-center md:text-right leading-relaxed">
-        <p class="text-white/70">Your data. Your journey. Your control.</p>
-        <p class="text-white/25 mt-1">GDPR-first · Built on consent · Powered by Austria's ecosystem</p>
+      <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
+        <p>© 2026 Austria Tourism · Österreich Werbung</p>
+        <p class="text-white/30">Reel-to-trip feature powered by <span class="text-white/50">ReelRoute</span> · Built at InnoDays 2026</p>
+        <div class="flex gap-4">
+          <a href="#" class="hover:text-white transition-colors">Imprint</a>
+          <a href="#" class="hover:text-white transition-colors">Data Protection</a>
+          <a href="#" class="hover:text-white transition-colors">Accessibility</a>
+        </div>
       </div>
     </div>
   </footer>
