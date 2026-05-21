@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Plan your stay from a Reel — Holidays in Austria</title>
+  <title>From Reel to Real Austria — austria.info</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Nunito+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -26,8 +26,19 @@
       border-radius: 40px;
       border: 3px solid rgba(255,255,255,0.15);
       box-shadow: 0 40px 80px rgba(0,0,0,0.5);
-      background: #111;
+      background: #f5f2ed;
       overflow: hidden;
+    }
+    .austria-card {
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e0d8;
+      background: white;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .austria-card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.1);
     }
   </style>
 </head>
@@ -35,7 +46,6 @@
 
   <!-- ─── AUSTRIA.INFO NAV ─── -->
   <header>
-    <!-- Top utility bar -->
     <div class="bg-[#2b333f] text-white/60 text-xs py-2 px-6 flex justify-between items-center">
       <div class="flex items-center gap-4">
         <span class="text-white/40">austria.info</span>
@@ -52,11 +62,8 @@
       </div>
     </div>
 
-    <!-- Main nav -->
     <nav class="bg-white border-b border-gray-100 px-6 py-4 flex items-center justify-between">
-      <!-- Austria.info logo -->
       <a href="#" class="flex items-center gap-3">
-        <!-- Austrian flag SVG -->
         <svg width="36" height="24" viewBox="0 0 36 24" fill="none">
           <rect width="36" height="8" fill="#dc0000"/>
           <rect y="8" width="36" height="8" fill="white"/>
@@ -68,16 +75,14 @@
         </div>
       </a>
 
-      <!-- Breadcrumb -->
       <div class="hidden md:flex items-center gap-2 text-sm text-gray-400">
         <a href="#" class="hover:text-[#dc0000] transition-colors">Home</a>
         <span>/</span>
         <a href="#" class="hover:text-[#dc0000] transition-colors">Planning</a>
         <span>/</span>
-        <span class="text-gray-700 font-medium">Plan your stay from a Reel</span>
+        <span class="text-gray-700 font-medium">Find your Austria moment</span>
       </div>
 
-      <!-- CTA -->
       <a href="https://reelroute-phi.vercel.app/" class="hidden md:inline-flex items-center gap-2 bg-[#dc0000] hover:bg-[#bd0000] text-white text-sm font-semibold px-4 py-2 rounded transition-colors">
         Try it now →
       </a>
@@ -87,102 +92,146 @@
 
   <!-- ─── HERO ─── -->
   <section class="relative overflow-hidden" style="background: var(--dark);">
-    <!-- Background image treatment -->
     <div class="absolute inset-0">
       <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg"
            alt="Hallstatt, Austria"
-           class="w-full h-full object-cover opacity-30">
-      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(43,51,63,0.95) 40%, rgba(43,51,63,0.5) 100%);"></div>
+           class="w-full h-full object-cover opacity-25">
+      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(43,51,63,0.97) 45%, rgba(43,51,63,0.55) 100%);"></div>
     </div>
 
-    <div class="relative max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center min-h-[560px]">
+    <div class="relative max-w-6xl mx-auto px-6 py-24 grid lg:grid-cols-2 gap-16 items-center min-h-[580px]">
 
       <!-- Left -->
       <div>
         <div class="inline-flex items-center gap-2 text-xs font-semibold px-3 py-1.5 rounded-full mb-8 border" style="background: rgba(220,0,0,0.2); border-color: rgba(220,0,0,0.4); color: #ff9090;">
           <span class="w-1.5 h-1.5 rounded-full bg-[#dc0000]"></span>
-          New · Plan your stay
+          New on austria.info · InnoDays 2026
         </div>
 
-        <h1 class="lora text-4xl lg:text-5xl font-semibold text-white leading-[1.1] mb-6">
-          You saw it on a Reel.<br>
-          <em style="color: #ff9090;">Let's turn it into<br>your Austria trip.</em>
+        <h1 class="lora text-4xl lg:text-5xl font-semibold text-white leading-[1.1] mb-4">
+          "I want to go there —<br>
+          <em style="color: #ff9090;">but I don't know<br>where it is."</em>
         </h1>
 
-        <p class="text-white/65 text-lg leading-relaxed mb-10 max-w-md">
-          Drop a link to any TikTok or Instagram Reel featuring Austria. We identify the destination, build a suggested itinerary, and connect you directly to transport and accommodation.
+        <p class="text-white/55 text-base leading-relaxed mb-3 max-w-md">
+          That's the moment we're fixing.
+        </p>
+
+        <p class="text-white/70 text-lg leading-relaxed mb-10 max-w-md">
+          Paste any Reel featuring Austria. We identify the location and activity type — then surface everything austria.info knows about it. <strong class="text-white">No booking, no prices. Just the answer to what you actually saw.</strong>
         </p>
 
         <a href="https://reelroute-phi.vercel.app/"
            class="inline-flex items-center gap-4 bg-[#dc0000] hover:bg-[#bd0000] text-white rounded-lg px-6 py-4 font-semibold text-base transition-colors shadow-lg mb-4">
-          <!-- Mini Reel thumbnail -->
           <div class="w-9 h-14 rounded-lg overflow-hidden border border-white/20 flex-shrink-0">
             <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="" class="w-full h-full object-cover">
           </div>
           <div class="text-left">
-            <div class="font-bold leading-tight">Start from your Reel</div>
-            <div class="text-sm text-white/70 font-normal mt-0.5">Paste any link · Get a full trip</div>
+            <div class="font-bold leading-tight">Paste your Reel — find the place</div>
+            <div class="text-sm text-white/70 font-normal mt-0.5">We extract location + activity for you</div>
           </div>
           <span class="text-white/80 text-lg ml-1">→</span>
         </a>
 
         <p class="text-white/30 text-xs flex items-center gap-1.5 mt-2">
           <svg class="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-          No account needed. Your data stays yours.
+          No account. No booking. Just discovery.
         </p>
       </div>
 
-      <!-- Right: Phone mockup -->
+      <!-- Right: Results mockup (phone) -->
       <div class="hidden lg:flex justify-end">
         <div class="relative">
-          <div class="phone-frame w-64">
-            <!-- Status bar -->
-            <div class="flex justify-between items-center px-5 pt-4 pb-2 text-white text-[11px] bg-black/40">
-              <span class="font-semibold">20:17</span>
-              <span>4G ▌▌</span>
+
+          <!-- The phone -->
+          <div class="phone-frame w-72" style="background: #f5f2ed;">
+
+            <!-- Austria.info-style mini header -->
+            <div class="flex items-center gap-2 px-4 py-3 bg-white border-b border-gray-100">
+              <svg width="20" height="13" viewBox="0 0 36 24" fill="none">
+                <rect width="36" height="8" fill="#dc0000"/>
+                <rect y="8" width="36" height="8" fill="white"/>
+                <rect y="16" width="36" height="8" fill="#dc0000"/>
+              </svg>
+              <span class="lora text-xs font-semibold text-gray-800">austria.info</span>
+              <span class="ml-auto text-[10px] px-2 py-0.5 rounded-full font-semibold" style="background: rgba(220,0,0,0.1); color: #dc0000;">● Analysing</span>
             </div>
-            <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="Hallstatt Reel" class="w-full">
-            <!-- Overlay -->
-            <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/90 to-transparent pt-16 pb-4 px-4">
-              <div class="flex items-center gap-2 mb-2.5">
-                <div class="w-5 h-5 rounded-full flex items-center justify-center flex-shrink-0" style="background: #dc0000;">
-                  <svg width="10" height="10" viewBox="0 0 36 24" fill="white"><rect width="36" height="8"/><rect y="8" width="36" height="8" fill="transparent"/><rect y="16" width="36" height="8"/></svg>
-                </div>
-                <span class="text-white/70 text-xs font-medium">austria.info</span>
-                <span class="ml-auto text-[10px] font-semibold" style="color: #4c7759;">● Matched</span>
+
+            <!-- Reel input preview -->
+            <div class="mx-3 mt-3 mb-2 bg-white rounded-xl p-3 border border-gray-200 flex items-center gap-2">
+              <div class="w-8 h-10 rounded-lg overflow-hidden flex-shrink-0">
+                <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="" class="w-full h-full object-cover">
               </div>
-              <div class="bg-white/10 backdrop-blur-xl rounded-xl p-3 border border-white/15">
-                <div class="flex justify-between items-start mb-2">
-                  <div>
-                    <p class="text-white text-sm font-bold">Hallstatt, Salzkammergut</p>
-                    <p class="text-white/40 text-[10px]">Detected from Reel · butnomatter</p>
-                  </div>
-                  <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full" style="background: rgba(220,0,0,0.25); color: #ff9090;">2 days</span>
-                </div>
-                <div class="space-y-1 mb-3">
-                  <div class="flex items-center gap-1.5">
-                    <span class="text-white/80 text-[10px]">🚆</span>
-                    <span class="text-white/55 text-[10px]">Vienna → Hallstatt · ÖBB · 3h</span>
-                  </div>
-                  <div class="flex items-center gap-1.5">
-                    <span class="text-white/80 text-[10px]">🏨</span>
-                    <span class="text-white/55 text-[10px]">Lakeside guesthouse · from €89</span>
-                  </div>
-                  <div class="flex items-center gap-1.5">
-                    <span class="text-white/80 text-[10px]">🎡</span>
-                    <span class="text-white/55 text-[10px]">Salt mine · Local market · Hike</span>
-                  </div>
-                </div>
-                <button class="w-full text-white text-xs font-bold rounded-lg py-2 transition-colors" style="background: #dc0000;">
-                  View full itinerary →
-                </button>
+              <div class="flex-1 min-w-0">
+                <p class="text-[10px] text-gray-400 mb-0.5">instagram.com/reel/</p>
+                <p class="text-xs font-semibold text-gray-700 truncate">butnomatter.theroadislife</p>
               </div>
+              <div class="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center" style="background: #dc0000;">
+                <svg width="8" height="8" fill="white" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
+
+            <!-- Extracted tags -->
+            <div class="mx-3 mb-3">
+              <p class="text-[9px] font-bold uppercase tracking-widest mb-1.5" style="color: var(--muted);">We found</p>
+              <div class="flex flex-wrap gap-1.5">
+                <span class="flex items-center gap-1 text-[10px] font-bold px-2.5 py-1 rounded-full text-white" style="background: #dc0000;">📍 Hallstatt</span>
+                <span class="flex items-center gap-1 text-[10px] font-bold px-2.5 py-1 rounded-full text-white" style="background: #4c7759;">🥾 Hiking</span>
+                <span class="flex items-center gap-1 text-[10px] font-bold px-2.5 py-1 rounded-full text-white" style="background: #28788f;">🏔 Mountains</span>
+              </div>
+            </div>
+
+            <!-- Austria.info result cards -->
+            <div class="px-3 pb-4 space-y-2">
+              <p class="text-[9px] font-bold uppercase tracking-widest mb-2" style="color: var(--muted);">From austria.info</p>
+
+              <!-- Card 1 -->
+              <a href="https://www.austria.info/en-gb/activities/pleasure-hiking/" target="_blank" class="austria-card flex gap-0 block">
+                <div class="flex items-center gap-2.5 p-2.5">
+                  <div class="w-12 h-12 rounded-lg flex-shrink-0 overflow-hidden">
+                    <div class="w-full h-full" style="background: linear-gradient(135deg, #4c7759, #28788f);"></div>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-[9px] font-bold uppercase tracking-wide mb-0.5" style="color: #4c7759;">HIKING</div>
+                    <p class="text-xs font-semibold text-gray-800 leading-tight">Pleasure Hiking in Salzkammergut</p>
+                    <p class="text-[9px] text-gray-400 mt-0.5">austria.info/activities/hiking →</p>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Card 2 -->
+              <a href="https://www.austria.info/en-gb/inspiration/lakes-and-mountains/" target="_blank" class="austria-card block">
+                <div class="flex items-center gap-2.5 p-2.5">
+                  <div class="w-12 h-12 rounded-lg flex-shrink-0 overflow-hidden">
+                    <div class="w-full h-full" style="background: linear-gradient(135deg, #28788f, #654b7b);"></div>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-[9px] font-bold uppercase tracking-wide mb-0.5" style="color: #28788f;">INSPIRATION</div>
+                    <p class="text-xs font-semibold text-gray-800 leading-tight">Lakes & Mountains — Hallstatt region</p>
+                    <p class="text-[9px] text-gray-400 mt-0.5">austria.info/inspiration →</p>
+                  </div>
+                </div>
+              </a>
+
+              <!-- Card 3 -->
+              <a href="https://www.austria.info/en-gb/" target="_blank" class="austria-card block">
+                <div class="flex items-center gap-2.5 p-2.5">
+                  <div class="w-12 h-12 rounded-lg flex-shrink-0 overflow-hidden">
+                    <div class="w-full h-full" style="background: linear-gradient(135deg, #974d30, #857741);"></div>
+                  </div>
+                  <div class="flex-1 min-w-0">
+                    <div class="text-[9px] font-bold uppercase tracking-wide mb-0.5" style="color: #974d30;">CULTURE</div>
+                    <p class="text-xs font-semibold text-gray-800 leading-tight">Hallstatt — UNESCO World Heritage</p>
+                    <p class="text-[9px] text-gray-400 mt-0.5">austria.info/destinations →</p>
+                  </div>
+                </div>
+              </a>
             </div>
           </div>
 
-          <!-- Floating badge -->
-          <div class="absolute -left-8 top-16 bg-white text-xs font-bold px-3 py-2 rounded-xl shadow-xl -rotate-3 leading-snug" style="color: #dc0000;">
-            Hallstatt<br>identified ✓
+          <!-- Floating label -->
+          <div class="absolute -left-10 top-20 bg-white text-xs font-bold px-3 py-2 rounded-xl shadow-xl -rotate-3 leading-snug" style="color: #2b333f; border: 1px solid #e5e0d8;">
+            Location +<br>activity found ✓
           </div>
         </div>
       </div>
@@ -190,10 +239,23 @@
   </section>
 
 
+  <!-- ─── THE JOB TO BE DONE ─── -->
+  <section class="py-16 bg-white border-b border-gray-100">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <p class="lora text-2xl lg:text-3xl font-semibold text-gray-900 leading-snug mb-4">
+        "I saw something. I want to know<br>where it is — and what I can do there."
+      </p>
+      <p class="text-gray-500 leading-relaxed">
+        That's the entire job. Answer that question well at the moment of inspiration, and the trip plans itself.
+      </p>
+    </div>
+  </section>
+
+
   <!-- ─── STATS STRIP ─── -->
-  <section class="py-12 bg-white border-b border-gray-100">
+  <section class="py-14" style="background: var(--sand);">
     <div class="max-w-4xl mx-auto px-6">
-      <div class="grid md:grid-cols-2 gap-8 md:gap-0 md:divide-x divide-gray-200">
+      <div class="grid md:grid-cols-2 gap-8 md:gap-0 md:divide-x divide-gray-300">
         <div class="flex flex-col items-center text-center md:pr-12">
           <div class="lora text-6xl font-semibold mb-3" style="color: #dc0000;">75%</div>
           <p class="text-gray-700 font-medium leading-snug mb-1">of travelers use social media<br>for travel inspiration</p>
@@ -205,101 +267,112 @@
           <a href="https://www.linkedin.com/posts/jeremyjauncey_one-of-the-bizarre-aspects-of-the-travel-activity-7272184536631857153-AVo0/" target="_blank" rel="noopener" class="text-xs mt-1.5" style="color: var(--muted);">Travel industry research →</a>
         </div>
       </div>
-      <p class="text-center text-sm mt-8" style="color: var(--muted);">The inspiration is there. The path from it to a booked Austria trip is broken. We fix that.</p>
+      <p class="text-center text-sm mt-10" style="color: var(--muted);">The inspiration is there. The bridge to austria.info's content isn't.</p>
     </div>
   </section>
 
 
   <!-- ─── THE BREAK IN THE JOURNEY ─── -->
-  <section class="py-20" style="background: var(--sand);">
+  <section class="py-20 bg-white">
     <div class="max-w-5xl mx-auto px-6">
       <div class="text-center mb-12">
         <p class="text-xs font-bold uppercase tracking-[0.15em] mb-3" style="color: var(--muted);">Why Austria loses guests today</p>
         <h2 class="lora text-3xl lg:text-4xl font-semibold text-gray-900">
-          The journey that <em style="color: #dc0000;">breaks every time</em>
+          The gap between <em style="color: #dc0000;">seeing and knowing</em>
         </h2>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 gap-3">
-        <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-left">
+        <div class="rounded-2xl p-5 shadow-sm border border-gray-100 text-left bg-white">
           <div class="w-8 h-8 rounded-lg font-bold text-sm flex items-center justify-center mb-4 text-white" style="background: #dc0000;">1</div>
           <div class="text-sm font-bold mb-1.5" style="color: #dc0000;">Spark</div>
           <p class="text-sm text-gray-500 leading-relaxed">She sees a Reel of Hallstatt. Hooked in 4 seconds.</p>
         </div>
 
-        <div class="bg-white rounded-2xl p-5 shadow-sm border border-dashed border-gray-200 text-left">
+        <div class="rounded-2xl p-5 shadow-sm border border-dashed border-gray-200 text-left bg-white">
           <div class="w-8 h-8 rounded-lg bg-gray-100 text-gray-400 font-bold text-sm flex items-center justify-center mb-4">···</div>
           <div class="text-sm font-bold text-gray-400 mb-1.5">Delay</div>
-          <p class="text-sm text-gray-400 leading-relaxed">She saves it. Life happens. Days later she tries to plan it.</p>
+          <p class="text-sm text-gray-400 leading-relaxed">She saves it. Life happens. Days later she tries to find it.</p>
         </div>
 
-        <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-left">
+        <div class="rounded-2xl p-5 shadow-sm border border-gray-100 text-left bg-white">
           <div class="w-8 h-8 rounded-lg font-bold text-sm flex items-center justify-center mb-4 text-white" style="background: #974d30;">2</div>
           <div class="text-sm font-bold mb-1.5" style="color: #974d30;">Confusion</div>
-          <p class="text-sm text-gray-500 leading-relaxed">Five tabs. Trains, hotels, maps — context resets every time.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">She doesn't know the name, the region, or even the country.</p>
         </div>
 
-        <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100 text-left">
+        <div class="rounded-2xl p-5 shadow-sm border border-gray-100 text-left bg-white">
           <div class="w-8 h-8 rounded-lg font-bold text-sm flex items-center justify-center mb-4 text-white" style="background: #6e5642;">3</div>
           <div class="text-sm font-bold mb-1.5" style="color: #6e5642;">Friction</div>
-          <p class="text-sm text-gray-500 leading-relaxed">Generic results. No platform knows she came from a Reel.</p>
+          <p class="text-sm text-gray-500 leading-relaxed">Google, Maps, Reddit — 277 websites to answer one simple question.</p>
         </div>
 
-        <div class="bg-white rounded-2xl p-5 shadow-sm border border-gray-100/50 bg-gray-50/50 text-left">
+        <div class="rounded-2xl p-5 shadow-sm border border-gray-100/50 bg-gray-50/50 text-left">
           <div class="w-8 h-8 rounded-lg bg-gray-200 text-gray-500 font-bold text-sm flex items-center justify-center mb-4">4</div>
           <div class="text-sm font-bold text-gray-400 mb-1.5">Loss</div>
-          <p class="text-sm text-gray-400 leading-relaxed">She books Porto. <strong class="text-gray-600">Austria never had a chance.</strong></p>
+          <p class="text-sm text-gray-400 leading-relaxed">Mood gone. She books Porto. <strong class="text-gray-600">Austria never answered.</strong></p>
         </div>
+      </div>
+
+      <!-- The fix -->
+      <div class="mt-10 rounded-2xl p-8 border text-center" style="background: #f5f2ed; border-color: #e5dfd4;">
+        <p class="text-sm font-bold uppercase tracking-widest mb-3" style="color: var(--muted);">The fix</p>
+        <p class="lora text-xl font-semibold text-gray-900">Austria.info already has the answer — hiking trails, local tips, regional guides. <br>We just need to surface it at the right moment.</p>
       </div>
     </div>
   </section>
 
 
   <!-- ─── HOW IT WORKS ─── -->
-  <section class="py-24 bg-white">
+  <section class="py-24" style="background: var(--sand);">
     <div class="max-w-5xl mx-auto px-6">
       <div class="text-center mb-16">
-        <p class="text-xs font-bold uppercase tracking-[0.15em] mb-3" style="color: var(--muted);">How it works</p>
+        <p class="text-xs font-bold uppercase tracking-[0.15em] mb-3" style="color: var(--muted);">The mechanic</p>
         <h2 class="lora text-3xl lg:text-4xl font-semibold text-gray-900">
-          Drop the Reel. <em style="color: #dc0000;">Get the trip.</em>
+          Paste Reel. Get Austria.
         </h2>
+        <p class="text-gray-500 mt-3 max-w-lg mx-auto">Three steps. No booking engine, no provider agreements. Just austria.info's existing content, delivered at the right moment.</p>
       </div>
 
       <div class="grid lg:grid-cols-3 gap-8">
 
-        <!-- Discover -->
-        <div class="rounded-2xl p-8 border border-gray-100 hover:-translate-y-1 transition-all duration-300 bg-white shadow-sm">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:-translate-y-1 transition-all duration-300">
           <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6 shadow" style="background: #dc0000;">
-            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
           </div>
-          <div class="text-[10px] font-bold uppercase tracking-[0.15em] mb-2" style="color: #dc0000;">01 · Discover</div>
-          <h3 class="lora text-xl font-semibold text-gray-900 mb-4 leading-tight">Spot it on a Reel.<br>Paste the link.</h3>
+          <div class="text-[10px] font-bold uppercase tracking-[0.15em] mb-2" style="color: #dc0000;">01 · Paste</div>
+          <h3 class="lora text-xl font-semibold text-gray-900 mb-4 leading-tight">Drop the Reel link.</h3>
           <p class="text-gray-500 text-sm leading-relaxed">
-            Found a place on TikTok or Instagram? Paste the link into the tool. ReelRoute identifies the Austrian destination in seconds.
+            Any TikTok or Instagram Reel. The one you saved three weeks ago. The one a friend sent. The one you can't stop rewatching.
           </p>
         </div>
 
-        <!-- Match -->
-        <div class="rounded-2xl p-8 border hover:-translate-y-1 transition-all duration-300 shadow-sm lg:mt-8" style="background: #f5f2ed; border-color: #e5dfd4;">
+        <!-- Step 2 -->
+        <div class="bg-white rounded-2xl p-8 border shadow-sm hover:-translate-y-1 transition-all duration-300 lg:mt-8" style="border-color: #e5dfd4;">
           <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6 shadow" style="background: #4c7759;">
-            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 9m0 8V9m0 0L9 7"/></svg>
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
           </div>
-          <div class="text-[10px] font-bold uppercase tracking-[0.15em] mb-2" style="color: #4c7759;">02 · Match</div>
-          <h3 class="lora text-xl font-semibold text-gray-900 mb-4 leading-tight">We read the Reel.<br>You get a trip.</h3>
-          <p class="text-gray-600 text-sm leading-relaxed">
-            The tool reads the vibe, identifies the location, and builds a suggested itinerary — transport, stay, and activities — tailored to what you saw.
+          <div class="text-[10px] font-bold uppercase tracking-[0.15em] mb-2" style="color: #4c7759;">02 · Extract</div>
+          <h3 class="lora text-xl font-semibold text-gray-900 mb-4 leading-tight">We read the Reel.</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            AI identifies the location <span class="font-semibold text-gray-700">(Hallstatt)</span> and the activity type <span class="font-semibold text-gray-700">(hiking)</span> — then maps them to austria.info's URL structure and content categories.
           </p>
+          <div class="mt-4 flex flex-wrap gap-1.5">
+            <span class="text-[10px] font-bold px-2 py-1 rounded-full text-white" style="background: #dc0000;">📍 Location</span>
+            <span class="text-[10px] font-bold px-2 py-1 rounded-full text-white" style="background: #4c7759;">🏷 Activity type</span>
+          </div>
         </div>
 
-        <!-- Book -->
-        <div class="rounded-2xl p-8 border hover:-translate-y-1 transition-all duration-300 shadow-sm" style="background: #2b333f; border-color: #3d4a58;">
-          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6 shadow" style="background: #dc0000;">
-            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+        <!-- Step 3 -->
+        <div class="bg-white rounded-2xl p-8 border border-gray-100 shadow-sm hover:-translate-y-1 transition-all duration-300">
+          <div class="w-12 h-12 rounded-xl flex items-center justify-center text-white font-bold text-lg mb-6 shadow" style="background: #28788f;">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 10h16M4 14h16M4 18h7"/></svg>
           </div>
-          <div class="text-[10px] font-bold uppercase tracking-[0.15em] mb-2" style="color: #ff9090;">03 · Book</div>
-          <h3 class="lora text-xl font-semibold text-white mb-4 leading-tight">One tap to book.<br>Trip confirmed.</h3>
-          <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.55);">
-            Review the suggested trip and book directly — ÖBB trains, flights, accommodation via austria.info partners. From saved Reel to confirmed itinerary in minutes.
+          <div class="text-[10px] font-bold uppercase tracking-[0.15em] mb-2" style="color: #28788f;">03 · Discover</div>
+          <h3 class="lora text-xl font-semibold text-gray-900 mb-4 leading-tight">Get the austria.info answer.</h3>
+          <p class="text-gray-500 text-sm leading-relaxed">
+            3–4 curated austria.info pages that match exactly what you saw — trails, regional guides, local tips. Direct deep links. No generic homepage.
           </p>
         </div>
 
@@ -308,51 +381,115 @@
   </section>
 
 
-  <!-- ─── SOCIAL PROOF ─── -->
-  <section class="py-20" style="background: var(--sand);">
-    <div class="max-w-4xl mx-auto px-6">
+  <!-- ─── RESULTS EXAMPLE (full width) ─── -->
+  <section class="py-20 bg-white">
+    <div class="max-w-5xl mx-auto px-6">
       <div class="text-center mb-12">
-        <p class="text-xs font-bold uppercase tracking-[0.15em] mb-3" style="color: var(--muted);">Traveler stories</p>
+        <p class="text-xs font-bold uppercase tracking-[0.15em] mb-3" style="color: var(--muted);">Example output</p>
         <h2 class="lora text-2xl lg:text-3xl font-semibold text-gray-900">
-          Real people. Real Austria trips.
+          This is what the traveler gets
         </h2>
+        <p class="text-gray-500 mt-2 text-sm">Input: a Reel of Hallstatt's cobbled streets and church tower</p>
       </div>
 
-      <div class="grid lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div class="text-sm mb-4" style="color: #dc0000;">★★★★★</div>
-          <p class="text-gray-700 text-sm leading-relaxed mb-5">"I showed it a Reel of Hallstatt in autumn. Within minutes I had a train from Vienna, a guesthouse near the lake, and a morning market on the itinerary. The mood didn't die."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full flex-shrink-0" style="background: linear-gradient(135deg, #dc0000, #974d30);"></div>
-            <div>
-              <div class="text-sm font-semibold text-gray-900">Sophie M.</div>
-              <div class="text-xs text-gray-400">Vienna · Solo traveler</div>
+      <!-- Reel input + extracted tags -->
+      <div class="max-w-2xl mx-auto mb-10">
+        <div class="bg-gray-50 rounded-2xl p-5 border border-gray-200 flex items-center gap-4 mb-4">
+          <div class="w-14 h-20 rounded-xl overflow-hidden flex-shrink-0 shadow">
+            <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="Reel" class="w-full h-full object-cover">
+          </div>
+          <div class="flex-1">
+            <p class="text-xs text-gray-400 mb-1">instagram.com/reel/butnomatter.theroadislife</p>
+            <p class="text-sm font-semibold text-gray-700">"This is Hallstatt in Austria 🇦🇹"</p>
+          </div>
+          <div class="flex-shrink-0">
+            <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: #dc0000;">
+              <svg width="12" height="12" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="3"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
             </div>
           </div>
         </div>
 
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 lg:mt-5">
-          <div class="text-sm mb-4" style="color: #dc0000;">★★★★★</div>
-          <p class="text-gray-700 text-sm leading-relaxed mb-5">"I pasted a Reel of the Wachau wine region. It found the village, suggested a train from Vienna, and showed me three family guesthouses. My parents loved it."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full flex-shrink-0" style="background: linear-gradient(135deg, #857741, #4c7759);"></div>
-            <div>
-              <div class="text-sm font-semibold text-gray-900">Lena K.</div>
-              <div class="text-xs text-gray-400">Berlin · Family trip</div>
-            </div>
-          </div>
+        <div class="flex flex-wrap gap-2">
+          <span class="text-xs font-bold px-3 py-1.5 rounded-full text-white" style="background: #dc0000;">📍 Hallstatt, Salzkammergut</span>
+          <span class="text-xs font-bold px-3 py-1.5 rounded-full text-white" style="background: #4c7759;">🥾 Hiking &amp; walking</span>
+          <span class="text-xs font-bold px-3 py-1.5 rounded-full text-white" style="background: #28788f;">🏔 Mountain scenery</span>
+          <span class="text-xs font-bold px-3 py-1.5 rounded-full text-white" style="background: #654b7b;">🏛 Culture &amp; heritage</span>
         </div>
+      </div>
 
-        <div class="bg-white rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div class="text-sm mb-4" style="color: #dc0000;">★★★★★</div>
-          <p class="text-gray-700 text-sm leading-relaxed mb-5">"I was about to book Porto. A friend sent me a Reel of the Styrian wine route. Twenty minutes later I had a full weekend confirmed. Austria won this time."</p>
-          <div class="flex items-center gap-3">
-            <div class="w-9 h-9 rounded-full flex-shrink-0" style="background: linear-gradient(135deg, #28788f, #654b7b);"></div>
-            <div>
-              <div class="text-sm font-semibold text-gray-900">Mia H.</div>
-              <div class="text-xs text-gray-400">Vienna · Young professional</div>
-            </div>
+      <!-- austria.info result cards -->
+      <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+
+        <a href="https://www.austria.info/en-gb/activities/pleasure-hiking/" target="_blank" rel="noopener" class="austria-card group">
+          <div class="h-28 w-full" style="background: linear-gradient(135deg, #4c7759 0%, #28788f 100%);"></div>
+          <div class="p-4">
+            <div class="text-[10px] font-bold uppercase tracking-widest mb-1" style="color: #4c7759;">Hiking</div>
+            <h4 class="text-sm font-bold text-gray-900 mb-1 leading-snug">Pleasure Hiking Trails — Salzkammergut</h4>
+            <p class="text-xs text-gray-400 leading-relaxed">Lake circuit walks, alpine meadow routes, and guided forest paths near Hallstatt.</p>
+            <p class="text-[10px] mt-2 font-semibold" style="color: #dc0000;">austria.info → Hiking</p>
           </div>
+        </a>
+
+        <a href="https://www.austria.info/en-gb/inspiration/lakes-and-mountains/" target="_blank" rel="noopener" class="austria-card group">
+          <div class="h-28 w-full" style="background: linear-gradient(135deg, #28788f 0%, #654b7b 100%);"></div>
+          <div class="p-4">
+            <div class="text-[10px] font-bold uppercase tracking-widest mb-1" style="color: #28788f;">Inspiration</div>
+            <h4 class="text-sm font-bold text-gray-900 mb-1 leading-snug">Lakes &amp; Mountains — Hallstatt &amp; Dachstein</h4>
+            <p class="text-xs text-gray-400 leading-relaxed">Everything the region is known for — the lake, the salt mine, the UNESCO village.</p>
+            <p class="text-[10px] mt-2 font-semibold" style="color: #dc0000;">austria.info → Inspiration</p>
+          </div>
+        </a>
+
+        <a href="https://www.austria.info/en-gb/" target="_blank" rel="noopener" class="austria-card group">
+          <div class="h-28 w-full" style="background: linear-gradient(135deg, #974d30 0%, #857741 100%);"></div>
+          <div class="p-4">
+            <div class="text-[10px] font-bold uppercase tracking-widest mb-1" style="color: #974d30;">Culture</div>
+            <h4 class="text-sm font-bold text-gray-900 mb-1 leading-snug">Hallstatt — UNESCO World Heritage Site</h4>
+            <p class="text-xs text-gray-400 leading-relaxed">The village, the prehistoric salt mine, and the charnel house. What to see and when.</p>
+            <p class="text-[10px] mt-2 font-semibold" style="color: #dc0000;">austria.info → Destinations</p>
+          </div>
+        </a>
+
+        <a href="https://www.austria.info/en-gb/" target="_blank" rel="noopener" class="austria-card group">
+          <div class="h-28 w-full" style="background: linear-gradient(135deg, #6e5642 0%, #4c7759 100%);"></div>
+          <div class="p-4">
+            <div class="text-[10px] font-bold uppercase tracking-widest mb-1" style="color: #6e5642;">Local tips</div>
+            <h4 class="text-sm font-bold text-gray-900 mb-1 leading-snug">Upper Austria — Regional Guide</h4>
+            <p class="text-xs text-gray-400 leading-relaxed">Hidden viewpoints, seasonal events, and what locals recommend beyond the main square.</p>
+            <p class="text-[10px] mt-2 font-semibold" style="color: #dc0000;">austria.info → Regions</p>
+          </div>
+        </a>
+
+      </div>
+
+      <p class="text-center text-sm mt-8" style="color: var(--muted);">No prices. No booking. Just the answer to what you actually saw — powered by austria.info's own content.</p>
+    </div>
+  </section>
+
+
+  <!-- ─── WHY THIS IS STRONGER FOR INNOD AYS ─── -->
+  <section class="py-20" style="background: var(--dark);">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-xs font-bold uppercase tracking-[0.15em] mb-4" style="color: rgba(255,255,255,0.4);">Why this works for Österreich Werbung</p>
+      <h2 class="lora text-3xl lg:text-4xl font-semibold text-white mb-12">
+        This makes <em style="color: #ff9090;">austria.info's existing content</em><br>discoverable at the right moment.
+      </h2>
+
+      <div class="grid md:grid-cols-3 gap-6 text-left">
+        <div class="rounded-2xl p-6" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);">
+          <div class="text-2xl mb-3">🎯</div>
+          <h3 class="text-base font-bold text-white mb-2">Narrowly scoped</h3>
+          <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.5);">No provider agreements, no booking integrations, no ÖBB or Booking.com partnerships needed. Just the content austria.info already has.</p>
+        </div>
+        <div class="rounded-2xl p-6" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);">
+          <div class="text-2xl mb-3">🏛</div>
+          <h3 class="text-base font-bold text-white mb-2">Built on your asset</h3>
+          <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.5);">Austria.info is Österreich Werbung's own platform. This makes it more powerful, not a new dependency to manage.</p>
+        </div>
+        <div class="rounded-2xl p-6" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);">
+          <div class="text-2xl mb-3">⚡</div>
+          <h3 class="text-base font-bold text-white mb-2">Achievable at InnoDays</h3>
+          <p class="text-sm leading-relaxed" style="color: rgba(255,255,255,0.5);">Location + activity extraction → URL mapping → curated cards. The mechanic is demonstrable end-to-end in a prototype.</p>
         </div>
       </div>
     </div>
@@ -360,97 +497,37 @@
 
 
   <!-- ─── CTA ─── -->
-  <section class="py-24 relative overflow-hidden" style="background: var(--dark);">
-    <div class="absolute inset-0">
-      <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="" class="w-full h-full object-cover opacity-10">
-      <div class="absolute inset-0" style="background: rgba(43,51,63,0.92);"></div>
-    </div>
+  <section class="py-20 bg-white border-t border-gray-100">
+    <div class="max-w-2xl mx-auto px-6 text-center">
+      <h2 class="lora text-3xl font-semibold text-gray-900 mb-4">
+        Try it with your own Reel.
+      </h2>
+      <p class="text-gray-500 mb-10 leading-relaxed">
+        Paste any TikTok or Instagram Reel featuring Austria. See what location and activity we extract — and which austria.info pages we surface.
+      </p>
 
-    <div class="relative max-w-6xl mx-auto px-6">
-      <div class="grid lg:grid-cols-2 gap-20 items-center">
-
-        <!-- Left -->
-        <div>
-          <p class="text-xs font-bold uppercase tracking-[0.15em] mb-5" style="color: #ff9090;">Ready to plan?</p>
-          <h2 class="lora text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6">
-            See it.<br>
-            <em style="color: #ff9090;">Plan it.</em><br>
-            Book it.
-          </h2>
-          <p class="text-white/60 text-lg leading-relaxed mb-10">
-            Paste any Reel featuring Austria and get a complete, bookable trip in minutes. Powered by <span class="text-white/80 font-medium">ReelRoute</span> — built for austria.info at InnoDays 2026.
-          </p>
-
-          <a href="https://reelroute-phi.vercel.app/"
-             class="group inline-flex items-center gap-5 bg-white text-gray-900 rounded-xl px-6 py-5 shadow-2xl hover:-translate-y-1 transition-all duration-300 mb-6">
-            <div class="relative w-12 h-[76px] rounded-xl overflow-hidden border-2 border-gray-100 flex-shrink-0 shadow-md">
-              <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="Your Reel" class="w-full h-full object-cover">
-              <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
-              <div class="absolute bottom-1 left-0 right-0 text-center">
-                <span class="text-white text-[7px] font-bold tracking-wide">YOUR REEL</span>
-              </div>
-            </div>
-            <div class="text-left">
-              <div class="text-base font-bold leading-tight">Plan my trip from this Reel</div>
-              <div class="text-sm text-gray-400 font-normal mt-0.5">Drop any Reel · Get a complete trip</div>
-            </div>
-            <span class="text-xl ml-1 group-hover:translate-x-1 transition-transform" style="color: #dc0000;">→</span>
-          </a>
-
-          <p class="text-white/30 text-xs flex items-start gap-2">
-            <svg class="w-3.5 h-3.5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/></svg>
-            GDPR-first. Your data stays yours. You decide what to share, and with whom.
-          </p>
-        </div>
-
-        <!-- Right: Phone -->
-        <div class="hidden lg:flex justify-end">
-          <div class="relative">
-            <div class="phone-frame w-[260px]">
-              <div class="flex justify-between items-center px-5 pt-4 pb-2 text-white text-[11px] bg-black/50">
-                <span class="font-semibold">20:17</span>
-                <span>4G ▌▌</span>
-              </div>
-              <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="" class="w-full pt-1">
-              <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black via-black/90 to-transparent pt-16 pb-4 px-4">
-                <div class="flex items-center gap-2 mb-2.5">
-                  <svg width="16" height="11" viewBox="0 0 36 24" fill="none" class="flex-shrink-0">
-                    <rect width="36" height="8" fill="#dc0000"/>
-                    <rect y="8" width="36" height="8" fill="white"/>
-                    <rect y="16" width="36" height="8" fill="#dc0000"/>
-                  </svg>
-                  <span class="text-white/70 text-[11px] font-medium">austria.info</span>
-                  <span class="ml-auto text-[10px] font-semibold" style="color: #4c7759;">● Live</span>
-                </div>
-                <div class="bg-white/10 backdrop-blur-xl rounded-xl p-3 border border-white/15">
-                  <div class="flex justify-between items-start mb-2">
-                    <div>
-                      <p class="text-white text-sm font-bold">Hallstatt, Salzkammergut</p>
-                      <p class="text-white/40 text-[10px]">Detected · butnomatter</p>
-                    </div>
-                    <span class="text-[10px] font-semibold px-1.5 py-0.5 rounded-full" style="background: rgba(220,0,0,0.25); color: #ff9090;">2 days</span>
-                  </div>
-                  <div class="space-y-1 mb-3">
-                    <div class="flex items-center gap-1.5"><span class="text-white text-[10px]">✓</span><span class="text-white/55 text-[10px]">Train · Vienna → Hallstatt · 3h</span></div>
-                    <div class="flex items-center gap-1.5"><span class="text-white text-[10px]">✓</span><span class="text-white/55 text-[10px]">Lakeside guesthouse · from €89</span></div>
-                    <div class="flex items-center gap-1.5"><span class="text-white/40 text-[10px]">→</span><span class="text-white/55 text-[10px]">Salt mine · Market · Morning hike</span></div>
-                  </div>
-                  <button class="w-full text-white text-xs font-bold rounded-lg py-2" style="background: #dc0000;">Book this trip →</button>
-                </div>
-              </div>
-            </div>
-            <div class="absolute -right-8 bottom-32 bg-white text-xs font-bold px-3 py-2 rounded-xl shadow-xl rotate-3 leading-snug" style="color: #2b333f;">
-              No forms<br>filled ✓
-            </div>
+      <a href="https://reelroute-phi.vercel.app/"
+         class="group inline-flex items-center gap-5 bg-[#dc0000] hover:bg-[#bd0000] text-white rounded-xl px-8 py-5 shadow-lg hover:-translate-y-1 transition-all duration-300 mb-4">
+        <div class="relative w-12 h-[76px] rounded-xl overflow-hidden border border-white/20 flex-shrink-0 shadow-md">
+          <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="Your Reel" class="w-full h-full object-cover">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+          <div class="absolute bottom-1 left-0 right-0 text-center">
+            <span class="text-white text-[7px] font-bold tracking-wide">YOUR REEL</span>
           </div>
         </div>
+        <div class="text-left">
+          <div class="text-lg font-bold leading-tight">Paste your Reel — find the place</div>
+          <div class="text-sm text-white/70 font-normal mt-0.5">Location + activity → austria.info results</div>
+        </div>
+        <span class="text-xl ml-1 group-hover:translate-x-1 transition-transform">→</span>
+      </a>
 
-      </div>
+      <p class="text-xs" style="color: var(--muted);">No account. No booking. No prices. Just discovery.</p>
     </div>
   </section>
 
 
-  <!-- ─── AUSTRIA.INFO FOOTER ─── -->
+  <!-- ─── FOOTER ─── -->
   <footer style="background: #2b333f;" class="text-white/50 pt-16 pb-8">
     <div class="max-w-6xl mx-auto px-6">
       <div class="grid md:grid-cols-4 gap-10 mb-12">
@@ -474,8 +551,8 @@
           <div class="space-y-2 text-sm">
             <div><a href="#" class="hover:text-white transition-colors">Summer Activities</a></div>
             <div><a href="#" class="hover:text-white transition-colors">Winter Activities</a></div>
-            <div><a href="#" class="hover:text-white transition-colors">Cities & Culture</a></div>
-            <div><a href="#" class="hover:text-white transition-colors">Nature & Scenery</a></div>
+            <div><a href="#" class="hover:text-white transition-colors">Cities &amp; Culture</a></div>
+            <div><a href="#" class="hover:text-white transition-colors">Nature &amp; Scenery</a></div>
           </div>
         </div>
 
@@ -492,7 +569,7 @@
         <div>
           <div class="text-xs font-bold uppercase tracking-widest text-white/30 mb-4">Planning</div>
           <div class="space-y-2 text-sm">
-            <div><a href="https://reelroute-phi.vercel.app/" class="hover:text-white transition-colors font-semibold" style="color: #ff9090;">Plan from a Reel ✦</a></div>
+            <div><a href="https://reelroute-phi.vercel.app/" class="hover:text-white transition-colors font-semibold" style="color: #ff9090;">Find your Austria moment ✦</a></div>
             <div><a href="#" class="hover:text-white transition-colors">Travel Tips</a></div>
             <div><a href="#" class="hover:text-white transition-colors">Getting There</a></div>
             <div><a href="#" class="hover:text-white transition-colors">Accommodation</a></div>
@@ -502,7 +579,7 @@
 
       <div class="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
         <p>© 2026 Austria Tourism · Österreich Werbung</p>
-        <p class="text-white/30">Reel-to-trip feature powered by <span class="text-white/50">ReelRoute</span> · Built at InnoDays 2026</p>
+        <p class="text-white/30">Reel-to-discovery feature powered by <span class="text-white/50">ReelRoute</span> · Built at InnoDays 2026</p>
         <div class="flex gap-4">
           <a href="#" class="hover:text-white transition-colors">Imprint</a>
           <a href="#" class="hover:text-white transition-colors">Data Protection</a>
