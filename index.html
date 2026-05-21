@@ -102,12 +102,12 @@
 
         <!-- Step label -->
         <div class="flex items-center gap-3">
-          <span id="carousel-label" class="text-xs font-bold uppercase tracking-widest text-white/50">Step 1 of 3 — AI detects what it sees</span>
+          <span id="carousel-label" class="text-xs font-bold uppercase tracking-widest text-white/50">The Reel — inspiration strikes</span>
         </div>
 
         <!-- Screenshot -->
         <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/15" style="width: 360px;">
-          <img id="carousel-img" src="Screenshot 2026-05-21 at 16.09.10.png" alt="ReelRoute app" class="w-full block" style="transition: opacity 0.3s ease;">
+          <img id="carousel-img" src="IMG_D078CB5A680C-1.jpeg" alt="ReelRoute app" class="w-full block" style="transition: opacity 0.3s ease;">
         </div>
 
         <!-- Dot nav + arrows -->
@@ -116,9 +116,10 @@
             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
           </button>
           <div class="flex items-center gap-2">
-            <button onclick="goTo(0)" class="carousel-dot w-2 h-2 rounded-full transition-all duration-300" style="background: white;"></button>
+            <button onclick="goTo(0)" class="carousel-dot w-2 h-2 rounded-full transition-all duration-300" style="background: white; transform: scale(1.4);"></button>
             <button onclick="goTo(1)" class="carousel-dot w-2 h-2 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.3);"></button>
             <button onclick="goTo(2)" class="carousel-dot w-2 h-2 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.3);"></button>
+            <button onclick="goTo(3)" class="carousel-dot w-2 h-2 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.3);"></button>
           </div>
           <button onclick="carouselNext()" class="w-7 h-7 rounded-full flex items-center justify-center text-white/40 hover:text-white transition-colors">
             <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
@@ -128,6 +129,7 @@
 
       <script>
         const slides = [
+          { src: "IMG_D078CB5A680C-1.jpeg",              label: "The Reel — inspiration strikes" },
           { src: "Screenshot 2026-05-21 at 16.09.10.png", label: "Step 1 of 3 — AI detects what it sees" },
           { src: "Screenshot 2026-05-21 at 16.09.44.png", label: "Step 2 of 3 — Matching locations in Austria" },
           { src: "Screenshot 2026-05-21 at 16.10.11.png", label: "Step 3 of 3 — Activities & things to do" }
