@@ -97,27 +97,85 @@
         </p>
       </div>
 
-      <!-- Right: All screenshots visible -->
-      <div class="hidden lg:flex items-center gap-3 justify-end">
+      <!-- Right: Skiing Reel with overlay graphics -->
+      <div class="hidden lg:flex justify-end items-center">
+        <div class="relative flex-shrink-0" style="width: 260px;">
 
-        <!-- Reel (portrait, left) -->
-        <div class="rounded-2xl overflow-hidden shadow-2xl border border-white/15 flex-shrink-0" style="width: 140px;">
-          <img src="IMG_D078CB5A680C-1.jpeg" alt="The Reel" class="w-full block">
+          <!-- Phone frame -->
+          <div class="phone-frame relative overflow-hidden" style="height: 520px;">
+            <img src="IMG_D078CB5A680C-1.jpeg" alt="Skiing Reel" class="w-full h-full object-cover object-top">
+
+            <!-- Gradient: top + bottom -->
+            <div class="absolute inset-0" style="background: linear-gradient(to bottom, rgba(0,0,0,0.55) 0%, transparent 28%, transparent 55%, rgba(0,0,0,0.8) 100%);"></div>
+
+            <!-- Top: Instagram Reels UI -->
+            <div class="absolute top-0 left-0 right-0 px-4 pt-4 flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <svg class="w-3.5 h-3.5 text-white opacity-70" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+                <span class="text-white text-xs font-bold tracking-wide">Reels</span>
+              </div>
+              <svg class="w-4 h-4 opacity-60" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="2"><circle cx="11" cy="11" r="8"/><path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-4.35-4.35"/></svg>
+            </div>
+
+            <!-- Progress bar -->
+            <div class="absolute left-4 right-4 h-0.5 bg-white/20 rounded-full" style="top: 36px;">
+              <div class="h-full bg-white rounded-full" style="width: 38%;"></div>
+            </div>
+
+            <!-- Right: social actions -->
+            <div class="absolute right-3 flex flex-col items-center gap-4" style="bottom: 140px;">
+              <div class="flex flex-col items-center gap-1">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(6px);">
+                  <svg class="w-4 h-4" fill="white" viewBox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </div>
+                <span class="text-white text-[9px] font-semibold">274</span>
+              </div>
+              <div class="flex flex-col items-center gap-1">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(6px);">
+                  <svg class="w-4 h-4" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                </div>
+                <span class="text-white text-[9px] font-semibold">5</span>
+              </div>
+              <div class="flex flex-col items-center gap-1">
+                <div class="w-8 h-8 rounded-full flex items-center justify-center" style="background: rgba(255,255,255,0.15); backdrop-filter: blur(6px);">
+                  <svg class="w-4 h-4" fill="none" stroke="white" viewBox="0 0 24 24" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"/></svg>
+                </div>
+                <span class="text-white text-[9px] font-semibold">18</span>
+              </div>
+            </div>
+
+            <!-- Bottom: username + caption + ReelRoute card -->
+            <div class="absolute bottom-0 left-0 right-0 px-3 pb-4">
+              <div class="flex items-center gap-2 mb-1.5">
+                <div class="w-6 h-6 rounded-full overflow-hidden flex-shrink-0 border border-white/40">
+                  <img src="IMG_D078CB5A680C-1.jpeg" alt="" class="w-full h-full object-cover object-top">
+                </div>
+                <span class="text-white text-[11px] font-bold">zellamseekaprun</span>
+                <span class="text-white/50 text-[10px]">· Seuraa</span>
+              </div>
+              <p class="text-white text-[10px] leading-snug mb-3 opacity-80">Sun's out, vibes up ☀️🎿</p>
+
+              <!-- ReelRoute detection pill -->
+              <div class="rounded-2xl px-3 py-2.5" style="background: rgba(220,0,0,0.88); backdrop-filter: blur(10px);">
+                <div class="flex items-center gap-1.5 mb-2">
+                  <span class="w-2 h-2 rounded-full bg-white inline-block"></span>
+                  <span class="text-white text-[9px] font-bold uppercase tracking-widest">ReelRoute detected</span>
+                </div>
+                <div class="flex flex-wrap gap-1">
+                  <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full text-white" style="background: rgba(255,255,255,0.2);">📍 Zell am See</span>
+                  <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full text-white" style="background: rgba(255,255,255,0.2);">⛷️ Skiing</span>
+                  <span class="text-[10px] font-semibold px-2 py-0.5 rounded-full text-white" style="background: rgba(255,255,255,0.2);">🏔️ Alps</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Floating badge -->
+          <div class="absolute -left-12 top-24 bg-white rounded-2xl shadow-2xl px-3 py-2 text-xs font-bold leading-snug -rotate-2" style="color: #8b0000; border: 1px solid #ffd5d5;">
+            Location +<br>activity found ✓
+          </div>
+
         </div>
-
-        <!-- App screens (landscape, stacked right) -->
-        <div class="flex flex-col gap-3 flex-shrink-0" style="width: 260px;">
-          <div class="rounded-xl overflow-hidden shadow-lg border border-white/10">
-            <img src="Screenshot 2026-05-21 at 16.09.10.png" alt="AI detects" class="w-full block">
-          </div>
-          <div class="rounded-xl overflow-hidden shadow-lg border border-white/10">
-            <img src="Screenshot 2026-05-21 at 16.09.44.png" alt="Locations" class="w-full block">
-          </div>
-          <div class="rounded-xl overflow-hidden shadow-lg border border-white/10">
-            <img src="Screenshot 2026-05-21 at 16.10.11.png" alt="Activities" class="w-full block">
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
