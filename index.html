@@ -170,9 +170,29 @@
             </div>
           </div>
 
-          <!-- Floating badge -->
-          <div class="absolute -left-12 top-24 bg-white rounded-2xl shadow-2xl px-3 py-2 text-xs font-bold leading-snug -rotate-2" style="color: #8b0000; border: 1px solid #ffd5d5;">
+          <!-- Badge: location + activity -->
+          <div class="absolute -left-14 top-24 bg-white rounded-2xl shadow-2xl px-3 py-2 text-xs font-bold leading-snug -rotate-2" style="color: #8b0000; border: 1px solid #ffd5d5;">
             Location +<br>activity found ✓
+          </div>
+
+          <!-- Badge: AI confidence -->
+          <div class="absolute -right-14 top-16 bg-[#dc0000] text-white rounded-2xl shadow-2xl px-3 py-2 text-xs font-bold leading-snug rotate-2">
+            <div class="text-white/60 text-[9px] uppercase tracking-widest mb-0.5">AI confidence</div>
+            94% match
+          </div>
+
+          <!-- Badge: results found -->
+          <div class="absolute -left-16 bottom-32 bg-white rounded-2xl shadow-xl px-3 py-2 text-xs font-semibold leading-snug rotate-1" style="color: #1a1a1a; border: 1px solid #f0d5d5;">
+            <div class="text-[9px] uppercase tracking-widest mb-0.5" style="color: #9b7272;">Results</div>
+            🗺️ 4 places found
+          </div>
+
+          <!-- Badge: scan complete -->
+          <div class="absolute -right-12 bottom-40 bg-white rounded-2xl shadow-xl px-3 py-2 text-xs font-semibold leading-snug -rotate-1" style="border: 1px solid #f0d5d5;">
+            <div class="flex items-center gap-1.5">
+              <span class="w-2 h-2 rounded-full bg-green-400 inline-block"></span>
+              <span class="text-gray-700">Scan complete</span>
+            </div>
           </div>
 
         </div>
