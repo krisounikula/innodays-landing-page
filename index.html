@@ -97,30 +97,64 @@
         </p>
       </div>
 
-      <!-- Right: App screenshots cascade -->
-      <div class="hidden lg:flex justify-end items-center">
-        <div class="relative" style="width: 340px; height: 480px;">
+      <!-- Right: App screenshots carousel -->
+      <div class="hidden lg:flex flex-col justify-center items-end gap-4">
 
-          <!-- Screenshot 3 (back) -->
-          <div class="absolute rounded-2xl overflow-hidden shadow-xl border border-white/10"
-               style="width: 300px; top: 40px; right: 0; transform: rotate(3deg); opacity: 0.6;">
-            <img src="Screenshot 2026-05-21 at 16.10.11.png" alt="ReelRoute step 3" class="w-full block">
+        <!-- Step label -->
+        <div class="flex items-center gap-3">
+          <span id="carousel-label" class="text-xs font-bold uppercase tracking-widest text-white/50">Step 1 of 3 — AI detects what it sees</span>
+        </div>
+
+        <!-- Screenshot -->
+        <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-white/15" style="width: 360px;">
+          <img id="carousel-img" src="Screenshot 2026-05-21 at 16.09.10.png" alt="ReelRoute app" class="w-full block" style="transition: opacity 0.3s ease;">
+        </div>
+
+        <!-- Dot nav + arrows -->
+        <div class="flex items-center gap-4">
+          <button onclick="carouselPrev()" class="w-7 h-7 rounded-full flex items-center justify-center text-white/40 hover:text-white transition-colors">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+          </button>
+          <div class="flex items-center gap-2">
+            <button onclick="goTo(0)" class="carousel-dot w-2 h-2 rounded-full transition-all duration-300" style="background: white;"></button>
+            <button onclick="goTo(1)" class="carousel-dot w-2 h-2 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.3);"></button>
+            <button onclick="goTo(2)" class="carousel-dot w-2 h-2 rounded-full transition-all duration-300" style="background: rgba(255,255,255,0.3);"></button>
           </div>
-
-          <!-- Screenshot 2 (middle) -->
-          <div class="absolute rounded-2xl overflow-hidden shadow-xl border border-white/10"
-               style="width: 310px; top: 20px; right: 10px; transform: rotate(1deg); opacity: 0.8;">
-            <img src="Screenshot 2026-05-21 at 16.09.44.png" alt="ReelRoute step 2" class="w-full block">
-          </div>
-
-          <!-- Screenshot 1 (front) -->
-          <div class="absolute rounded-2xl overflow-hidden shadow-2xl border border-white/20"
-               style="width: 320px; top: 0; right: 20px; transform: rotate(-1deg);">
-            <img src="Screenshot 2026-05-21 at 16.09.10.png" alt="ReelRoute step 1" class="w-full block">
-          </div>
-
+          <button onclick="carouselNext()" class="w-7 h-7 rounded-full flex items-center justify-center text-white/40 hover:text-white transition-colors">
+            <svg width="16" height="16" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+          </button>
         </div>
       </div>
+
+      <script>
+        const slides = [
+          { src: "Screenshot 2026-05-21 at 16.09.10.png", label: "Step 1 of 3 — AI detects what it sees" },
+          { src: "Screenshot 2026-05-21 at 16.09.44.png", label: "Step 2 of 3 — Matching locations in Austria" },
+          { src: "Screenshot 2026-05-21 at 16.10.11.png", label: "Step 3 of 3 — Activities & things to do" }
+        ];
+        let current = 0;
+
+        function goTo(i) {
+          current = i;
+          const img = document.getElementById('carousel-img');
+          const label = document.getElementById('carousel-label');
+          img.style.opacity = '0';
+          setTimeout(() => {
+            img.src = slides[i].src;
+            label.textContent = slides[i].label;
+            img.style.opacity = '1';
+          }, 150);
+          document.querySelectorAll('.carousel-dot').forEach((dot, idx) => {
+            dot.style.background = idx === i ? 'white' : 'rgba(255,255,255,0.3)';
+            dot.style.transform = idx === i ? 'scale(1.4)' : 'scale(1)';
+          });
+        }
+
+        function carouselNext() { goTo((current + 1) % slides.length); }
+        function carouselPrev() { goTo((current + slides.length - 1) % slides.length); }
+
+        setInterval(carouselNext, 3500);
+      </script>
     </div>
   </section>
 
