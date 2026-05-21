@@ -84,9 +84,6 @@
 
         <a href="https://reelroute-phi.vercel.app/"
            class="inline-flex items-center gap-4 bg-[#dc0000] hover:bg-[#bd0000] text-white rounded-lg px-6 py-4 font-semibold text-base transition-colors shadow-lg mb-4">
-          <div class="w-9 h-14 rounded-lg overflow-hidden border border-white/20 flex-shrink-0">
-            <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="" class="w-full h-full object-cover">
-          </div>
           <div class="text-left">
             <div class="font-bold leading-tight">Paste your Reel — find the place</div>
             <div class="text-sm text-white/70 font-normal mt-0.5">We extract location + activity for you</div>
@@ -100,99 +97,15 @@
         </p>
       </div>
 
-      <!-- Right: Results mockup (phone) -->
+      <!-- Right: Reel image -->
       <div class="hidden lg:flex justify-end">
         <div class="relative">
 
-          <!-- The phone -->
-          <div class="phone-frame w-72" style="background: #fff0f0;">
-
-            <!-- Austria.info-style mini header -->
-            <div class="flex items-center gap-2 px-4 py-3 bg-white border-b border-gray-100">
-              <svg width="20" height="13" viewBox="0 0 36 24" fill="none">
-                <rect width="36" height="8" fill="#dc0000"/>
-                <rect y="8" width="36" height="8" fill="white"/>
-                <rect y="16" width="36" height="8" fill="#dc0000"/>
-              </svg>
-              <span class="lora text-xs font-semibold text-gray-800">austria.info</span>
-              <span class="ml-auto text-[10px] px-2 py-0.5 rounded-full font-semibold bg-[#dc0000] text-white">● Analysing</span>
-            </div>
-
-            <!-- Reel input preview -->
-            <div class="mx-3 mt-3 mb-2 bg-white rounded-xl p-3 border border-gray-200 flex items-center gap-2">
-              <div class="w-8 h-10 rounded-lg overflow-hidden flex-shrink-0">
-                <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg" alt="" class="w-full h-full object-cover">
-              </div>
-              <div class="flex-1 min-w-0">
-                <p class="text-[10px] text-gray-400 mb-0.5">instagram.com/reel/</p>
-                <p class="text-xs font-semibold text-gray-700 truncate">butnomatter.theroadislife</p>
-              </div>
-              <div class="w-5 h-5 rounded-full flex-shrink-0 flex items-center justify-center" style="background: #dc0000;">
-                <svg width="8" height="8" fill="white" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7" stroke="white" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-            </div>
-
-            <!-- Extracted tags -->
-            <div class="mx-3 mb-3">
-              <p class="text-[9px] font-bold uppercase tracking-widest mb-1.5 text-gray-500">We found</p>
-              <div class="flex flex-wrap gap-1.5">
-                <span class="flex items-center gap-1 text-[10px] font-bold px-2.5 py-1 rounded-full text-white" style="background: #dc0000;">📍 Hallstatt</span>
-                <span class="flex items-center gap-1 text-[10px] font-bold px-2.5 py-1 rounded-full text-white" style="background: #dc0000;">🥾 Hiking</span>
-                <span class="flex items-center gap-1 text-[10px] font-bold px-2.5 py-1 rounded-full text-white" style="background: #bd0000;">🏔 Mountains</span>
-              </div>
-            </div>
-
-            <!-- Austria.info result cards -->
-            <div class="px-3 pb-4 space-y-2">
-              <p class="text-[9px] font-bold uppercase tracking-widest mb-2 text-gray-500">From austria.info</p>
-
-              <!-- Card 1 -->
-              <a href="https://www.austria.info/en-gb/activities/pleasure-hiking/" target="_blank" class="austria-card flex gap-0 block">
-                <div class="flex items-center gap-2.5 p-2.5">
-                  <div class="w-12 h-12 rounded-lg flex-shrink-0 overflow-hidden">
-                    <div class="w-full h-full" style="background: linear-gradient(135deg, #dc0000, #bd0000);"></div>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <div class="text-[9px] font-bold uppercase tracking-wide mb-0.5 text-gray-500">HIKING</div>
-                    <p class="text-xs font-semibold text-gray-800 leading-tight">Pleasure Hiking in Salzkammergut</p>
-                    <p class="text-[9px] text-gray-400 mt-0.5">austria.info/activities/hiking →</p>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Card 2 -->
-              <a href="https://www.austria.info/en-gb/inspiration/lakes-and-mountains/" target="_blank" class="austria-card block">
-                <div class="flex items-center gap-2.5 p-2.5">
-                  <div class="w-12 h-12 rounded-lg flex-shrink-0 overflow-hidden">
-                    <div class="w-full h-full" style="background: linear-gradient(135deg, #bd0000, #dc0000);"></div>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <div class="text-[9px] font-bold uppercase tracking-wide mb-0.5 text-gray-500">INSPIRATION</div>
-                    <p class="text-xs font-semibold text-gray-800 leading-tight">Lakes & Mountains — Hallstatt region</p>
-                    <p class="text-[9px] text-gray-400 mt-0.5">austria.info/inspiration →</p>
-                  </div>
-                </div>
-              </a>
-
-              <!-- Card 3 -->
-              <a href="https://www.austria.info/en-gb/" target="_blank" class="austria-card block">
-                <div class="flex items-center gap-2.5 p-2.5">
-                  <div class="w-12 h-12 rounded-lg flex-shrink-0 overflow-hidden">
-                    <div class="w-full h-full" style="background: linear-gradient(135deg, #dc0000, #dc0000);"></div>
-                  </div>
-                  <div class="flex-1 min-w-0">
-                    <div class="text-[9px] font-bold uppercase tracking-wide mb-0.5 text-gray-500">CULTURE</div>
-                    <p class="text-xs font-semibold text-gray-800 leading-tight">Hallstatt — UNESCO World Heritage</p>
-                    <p class="text-[9px] text-gray-400 mt-0.5">austria.info/destinations →</p>
-                  </div>
-                </div>
-              </a>
-            </div>
-          </div>
-
-          <!-- Floating label -->
-          <div class="absolute -left-10 top-20 bg-white text-xs font-bold px-3 py-2 rounded-xl shadow-xl -rotate-3 leading-snug" style="color: #8b0000; border: 1px solid #ffd5d5;">
-            Location +<br>activity found ✓
+          <!-- Reel image in phone frame -->
+          <div class="phone-frame w-64" style="height: 480px; background: #000;">
+            <img src="WhatsApp Image 2026-05-20 at 20.18.07.jpeg"
+                 alt="Hallstatt Reel"
+                 class="w-full h-full object-cover">
           </div>
         </div>
       </div>
